@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets - Leslie Planet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Leslie Planet</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="reflexion.html" class="nav-link">Réflexion</a></li>
+                <li><a href="avenir.html" class="nav-link">Avenir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Mes Projets</h1>
+            <p class="page-subtitle">15+ projets académiques et professionnels couvrant l'analyse de données, la programmation et l'exploitation de bases de données</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                <button class="filter-btn" data-filter="S1">Semestre 1</button>
+                <button class="filter-btn" data-filter="S2">Semestre 2</button>
+                <button class="filter-btn" data-filter="S3">Semestre 3</button>
+                <button class="filter-btn" data-filter="S4">Semestre 4</button>
+            </div>
+            <div class="sort">
+                <label for="sort-select">Trier par :</label>
+                <select id="sort-select">
+                    <option value="recent">Plus récent</option>
+                    <option value="ancien">Plus ancien</option>
+                    <option value="alphabetical">Alphabétique</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid" id="projects-container">
+                
+                <!-- Stage IMA -->
+                <article class="project-card" data-semestre="S4" data-date="2025-04-13" data-title="Stage IMA" id="stage-ima">
+                    <div class="project-image">
+                        <img src="Stage.png" alt="Stage IMA">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S4</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Stage IMA - 10 semaines</h3>
+                        <p class="project-date">Avril - Juin 2025</p>
+                        <p class="project-desc">
+                            Service Analyses et Pilotage chez Inter Mutuelles Assistance : mise à jour de bases de données, 
+                            cartographies géographiques, automatisation VBA, intégration prospects PRAXEDO.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Gestion BDD</span>
+                            <span class="tag">Cartographie</span>
+                            <span class="tag">VBA</span>
+                            <span class="tag">Reporting</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Gestion rigoureuse de données sensibles à échéances serrées</li>
+                                <li>Adaptation aux outils internes (PRAXEDO)</li>
+                                <li>Communication efficace avec multiples services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- API CCAM -->
+                <article class="project-card" data-semestre="S4" data-date="2025-02-01" data-title="API CCAM" id="api-ccam">
+                    <div class="project-image">
+                        <img src="SAEMesmoudi2.png" alt="API CCAM">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S4</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Développement API REST - CCAM</h3>
+                        <p class="project-date">Février 2025</p>
+                        <p class="project-desc">
+                            Développement d'une API REST avec Node.js pour simplifier l'accès aux données de la Classification 
+                            Commune des Actes Médicaux (CCAM). Base MySQL, format JSON, endpoints bien définis.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JSON</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Première expérience avec Node.js et Express</li>
+                                <li>Structuration d'une API RESTful professionnelle</li>
+                                <li>Optimisation des requêtes sur base complexe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Datawarehouse -->
+                <article class="project-card" data-semestre="S3" data-date="2024-12-15" data-title="Datawarehouse SportOne" id="datawarehouse">
+                    <div class="project-image">
+                        <img src="SAENoel.png" alt="Datawarehouse">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S3</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Intégration Datawarehouse - SportOne</h3>
+                        <p class="project-date">Décembre 2024</p>
+                        <p class="project-desc">
+                            Conception d'un entrepôt de données pour l'entreprise fictive SportOne (vente articles de sport). 
+                            Modèle en étoile, ETL, 10+ tableaux de bord interactifs pour le pilotage stratégique.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Datawarehouse</span>
+                            <span class="tag">ETL</span>
+                            <span class="tag">Modèle en étoile</span>
+                            <span class="tag">BI</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Modélisation multidimensionnelle complexe (5 axes d'analyse)</li>
+                                <li>Processus ETL sur données volumineuses (2017-2022)</li>
+                                <li>Création de métriques métier pertinentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reporting Analyse Multivariée -->
+                <article class="project-card" data-semestre="S3" data-date="2024-10-01" data-title="Reporting Pauvreté" id="reporting-multivariee">
+                    <div class="project-image">
+                        <img src="ReportingAnalyseMultivariee.png" alt="Reporting">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S3</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Reporting Analyse Multivariée - Pauvreté</h3>
+                        <p class="project-date">Octobre 2024</p>
+                        <p class="project-desc">
+                            Outil visuel automatisé pour le suivi de la pauvreté en France (9,1M personnes sous le seuil). 
+                            Dashboards interactifs en R Shiny avec données INSEE.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">R Shiny</span>
+                            <span class="tag">ACP</span>
+                            <span class="tag">Dashboards</span>
+                            <span class="tag">INSEE</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Web Scraping -->
+                <article class="project-card" data-semestre="S3" data-date="2024-11-20" data-title="Collecte données web" id="web-scraping">
+                    <div class="project-image">
+                        <img src="SAEGestionDonneWeb.jpg" alt="Web Scraping">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S3</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Collecte de données web</h3>
+                        <p class="project-date">Novembre 2024</p>
+                        <p class="project-desc">
+                            Web scraping (Wikipedia - musées de France) + API ADEME (DPE logements). 
+                            Cartographie interactive avec Folium, analyse comparative 4 villes.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">BeautifulSoup</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">Folium</span>
+                            <span class="tag">Géolocalisation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Besoin Territoire -->
+                <article class="project-card" data-semestre="S3" data-date="2024-12-01" data-title="Besoin Territoire" id="besoin-territoire">
+                    <div class="project-image">
+                        <img src="SAEBesoinTerritoire.png" alt="Besoin Territoire">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S3-S4</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Besoin du territoire - Enseignement NSI</h3>
+                        <p class="project-date">Année complète 2024-2025</p>
+                        <p class="project-desc">
+                            Animation de cours NSI pour 2 classes de première (Lycée Paul Guérin). 
+                            Programmation web (HTML/CSS), formats de données (CSV), formulaires. 3 séances de 2h.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Pédagogie</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">Communication</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Adapter le discours technique à des lycéens débutants</li>
+                                <li>Conception d'exercices progressifs et motivants</li>
+                                <li>Gestion de groupes et animation de séances</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- DataViz -->
+                <article class="project-card" data-semestre="S2" data-date="2024-06-01" data-title="DataViz Météo France" id="dataviz">
+                    <div class="project-image">
+                        <img src="SAEDataViz.PNG" alt="DataViz">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S2</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>DataVisualisation - SAE Nationale</h3>
+                        <p class="project-date">Juin 2024</p>
+                        <p class="project-desc">
+                            SAE nationale d'une journée pour Météo France (tous les BUT SD France). 
+                            Analyse et visualisation de données climatiques en groupe de 5.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Travail d'équipe</span>
+                            <span class="tag">Gestion du temps</span>
+                            <span class="tag">DataViz</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BDR -->
+                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Base de données relationnelle" id="bdr">
+                    <div class="project-image">
+                        <img src="SAEBDR.PNG" alt="BDR">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S2</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Base de données relationnelle</h3>
+                        <p class="project-date">Mars 2024</p>
+                        <p class="project-desc">
+                            Conception BDD, alimentation via CSV, interface Tkinter pour visualisation et ajout de données. 
+                            Requêtes SQL complexes.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Tkinter</span>
+                            <span class="tag">Modélisation</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Remplissage de tables avec croisement de plusieurs CSV</li>
+                                <li>Gestion rigoureuse des clés étrangères</li>
+                                <li>Cohérence des données entre sources différentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Régression -->
+                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Régression logements" id="regression">
+                    <div class="project-image">
+                        <img src="SAEBureau.PNG" alt="Régression">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S2</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Régression - Prix logements parisiens</h3>
+                        <p class="project-date">Mars 2024</p>
+                        <p class="project-desc">
+                            Prédiction du prix des logements parisiens avec R. Test de différents modèles (linéaire, exponentiel), 
+                            segmentation pertinente.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">R</span>
+                            <span class="tag">Régression</span>
+                            <span class="tag">Modélisation</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Choix du modèle le plus adapté aux données</li>
+                                <li>Sélection des variables prédictives pertinentes</li>
+                                <li>Segmentation cohérente (maisons vs appartements)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Échantillonnage -->
+                <article class="project-card" data-semestre="S2" data-date="2024-03-15" data-title="Échantillonnage" id="echantillonnage">
+                    <div class="project-image">
+                        <img src="SAEEchantillonage.PNG" alt="Échantillonnage">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S2</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Échantillonnage</h3>
+                        <p class="project-date">Mars 2024</p>
+                        <p class="project-desc">
+                            Estimation de la population Île-de-France via échantillonnage aléatoire simple puis stratifié. 
+                            Test du khi-deux avec R.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">R</span>
+                            <span class="tag">Échantillonnage</span>
+                            <span class="tag">Tests statistiques</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Martinique -->
+                <article class="project-card" data-semestre="S1" data-date="2024-01-30" data-title="Étude Martinique" id="martinique">
+                    <div class="project-image">
+                        <img src="SAEMartinique.PNG" alt="Martinique">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S1</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Étude démographique - Martinique</h3>
+                        <p class="project-date">Janvier 2024</p>
+                        <p class="project-desc">
+                            Compte rendu décrivant la situation démographique et le marché du travail en Martinique 
+                            (données INSEE). Graphiques Excel.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Statistiques descriptives</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">INSEE</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Islande -->
+                <article class="project-card" data-semestre="S1" data-date="2024-02-15" data-title="Présentation Islande" id="islande">
+                    <div class="project-image">
+                        <img src="SAEIslande.PNG" alt="Islande">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S1</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Présentation bilingue - Islande</h3>
+                        <p class="project-date">Février 2024</p>
+                        <p class="project-desc">
+                            Présentation en anglais (économie) et français (culture) de l'Islande. 
+                            Travail de groupe, PowerPoint structuré.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Anglais</span>
+                            <span class="tag">Communication</span>
+                            <span class="tag">Travail d'équipe</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Gestion Fichier -->
+                <article class="project-card" data-semestre="S1" data-date="2024-01-15" data-title="Gestion de fichier" id="gestion-fichier">
+                    <div class="project-image">
+                        <img src="SAEGestionFichier.PNG" alt="Gestion fichier">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S1</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestion de fichier CSV</h3>
+                        <p class="project-date">Janvier 2024</p>
+                        <p class="project-desc">
+                            Traitement d'un fichier CSV en Python : suppression de colonnes inutiles tout en conservant 
+                            l'ordre et l'organisation des données.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CSV</span>
+                            <span class="tag">Manipulation de données</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Manipulation de listes imbriquées en Python</li>
+                                <li>Préservation de l'ordre des données après suppression</li>
+                                <li>Rigueur dans le traitement ligne par ligne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reporting S1 -->
+                <article class="project-card" data-semestre="S1" data-date="2023-12-30" data-title="Gestionnaire notes" id="reporting-s1">
+                    <div class="project-image">
+                        <img src="SAEReporting.PNG" alt="Reporting">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S1</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestionnaire de notes - VBA</h3>
+                        <p class="project-date">Décembre 2023</p>
+                        <p class="project-desc">
+                            Gestionnaire de notes dynamique en VBA/Excel : recalcul automatique de la moyenne, 
+                            ajout/suppression de notes, validation du passage en 2e année.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">VBA</span>
+                            <span class="tag">Excel</span>
+                            <span class="tag">Automatisation</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>🎯 Défis relevés :</strong>
+                            <ul>
+                                <li>Insertion automatique des notes à la suite des précédentes</li>
+                                <li>Réorganisation des notes après suppression</li>
+                                <li>Logique d'automatisation avec VBA (première expérience)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Leslie Planet</h4>
+                    <p>Étudiante en BUT Science des Données</p>
+                    <p>IUT de Niort - Université de Poitiers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="parcours.html">Parcours</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="avenir.html">Avenir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 leslie.planet@etud.univ-poitiers.fr</p>
+                    <p>📄 <a href="cv4-LesliePlanet.pdf" target="_blank">Télécharger mon CV</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Leslie Planet - Portfolio professionnel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
