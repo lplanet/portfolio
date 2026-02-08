@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.soft-skill-card, .quality-item, .defect-item, ' +
         '.work-style-item, .vision-item, .job-card, ' +
         '.feedback-item, .improvement-item, .reason-card, ' +
-        '.conseil-card, .mission-card'
+        '.conseil-card, .mission-card, .cesure-card'
     );
 
     animatedElements.forEach(el => {

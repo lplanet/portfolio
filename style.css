@@ -949,12 +949,72 @@ a:hover {
 
 /* Projet Pro & Recruteur */
 .projet-pro-section,
-.recruteur-section {
+.recruteur-section,
+.cesure-section {
     padding: 4rem 0;
 }
 
 .projet-pro-section {
     background: var(--light-bg);
+}
+
+.cesure-section {
+    background: var(--white);
+}
+
+.cesure-content {
+    margin-top: 2rem;
+}
+
+.cesure-intro {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cesure-intro p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    color: var(--text-dark);
+}
+
+.cesure-reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cesure-card {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-blue);
+}
+
+.cesure-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.cesure-conclusion {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.cesure-conclusion h3 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cesure-conclusion p {
+    color: rgba(255,255,255,0.95);
+    font-size: 1.125rem;
 }
 
 .reason-cards {
