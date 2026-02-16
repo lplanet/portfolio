@@ -7,41 +7,65 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortSelect = document.getElementById('sort-select');
     const projectsContainer = document.getElementById('projects-container');
 
+    // État des filtres
+    let currentSemestreFilter = 'all';
+    let currentMetierFilter = 'all';
+
     // Filtrage des projets
     if (filterBtns.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // Retirer la classe active de tous les boutons
-                filterBtns.forEach(b => b.classList.remove('active'));
+                const filterType = this.getAttribute('data-type');
+                const filter = this.getAttribute('data-filter');
+
+                // Retirer la classe active uniquement des boutons du même type
+                filterBtns.forEach(b => {
+                    if (b.getAttribute('data-type') === filterType) {
+                        b.classList.remove('active');
+                    }
+                });
+                
                 // Ajouter la classe active au bouton cliqué
                 this.classList.add('active');
 
-                const filter = this.getAttribute('data-filter');
+                // Mettre à jour l'état du filtre approprié
+                if (filterType === 'semestre') {
+                    currentSemestreFilter = filter;
+                } else if (filterType === 'metier') {
+                    currentMetierFilter = filter;
+                }
 
-                projectCards.forEach(card => {
-                    const semestre = card.getAttribute('data-semestre');
-                    
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else if (semestre && semestre.includes(filter)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.9)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
+                // Appliquer les filtres
+                applyFilters();
             });
+        });
+    }
+
+    // Fonction pour appliquer les filtres combinés
+    function applyFilters() {
+        projectCards.forEach(card => {
+            const semestre = card.getAttribute('data-semestre');
+            const metiers = card.getAttribute('data-metiers');
+            
+            let showBySemestre = currentSemestreFilter === 'all' || 
+                                 (semestre && semestre.includes(currentSemestreFilter));
+            
+            let showByMetier = currentMetierFilter === 'all' || 
+                              (metiers && metiers.includes(currentMetierFilter));
+            
+            if (showBySemestre && showByMetier) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
         });
     }
 
