@@ -24,7 +24,7 @@
     <section class="page-header">
         <div class="container">
             <h1>Mes Projets</h1>
-            <p class="page-subtitle">15+ projets académiques et professionnels couvrant l'analyse de données, la programmation et l'exploitation de bases de données</p>
+            <p class="page-subtitle">20+ projets académiques et professionnels couvrant l'analyse de données, la programmation, l'IA et l'exploitation de bases de données</p>
         </div>
     </section>
 
@@ -36,6 +36,8 @@
                 <button class="filter-btn" data-filter="S2">Semestre 2</button>
                 <button class="filter-btn" data-filter="S3">Semestre 3</button>
                 <button class="filter-btn" data-filter="S4">Semestre 4</button>
+                <button class="filter-btn" data-filter="S5">Semestre 5</button>
+                <button class="filter-btn" data-filter="S6">Semestre 6</button>
             </div>
             <div class="sort">
                 <label for="sort-select">Trier par :</label>
@@ -79,6 +81,170 @@
                                 <li>Gestion rigoureuse de données sensibles à échéances serrées</li>
                                 <li>Adaptation aux outils internes (PRAXEDO)</li>
                                 <li>Communication efficace avec multiples services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Chatbox Portfolio IA -->
+                <article class="project-card" data-semestre="S6" data-date="2025-12-15" data-title="Chatbox Portfolio IA" id="chatbox">
+                    <div class="project-image">
+                        <img src="images/chatbox.png" alt="Chatbox Portfolio IA">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S6</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chatbox Portfolio IA - Système RAG</h3>
+                        <p class="project-date">Décembre 2025</p>
+                        <p class="project-desc">
+                            Création d'un portfolio interactif reposant sur un modèle de langage avec architecture RAG. 
+                            Indexation vectorielle, base de connaissances, interface conversationnelle déployée sur Streamlit Cloud.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">ChromaDB</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>Défis relevés :</strong>
+                            <ul>
+                                <li>Maîtrise complète de la chaîne RAG (indexation, récupération, génération)</li>
+                                <li>Segmentation et vectorisation de données de profil</li>
+                                <li>Déploiement d'une application IA en ligne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Big Data - Analyse de sentiment -->
+                <article class="project-card" data-semestre="S6" data-date="2025-11-30" data-title="Big Data Sentiment" id="big-data">
+                    <div class="project-image">
+                        <img src="images/bigdata.png" alt="Big Data">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S6</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Big Data - Analyse de sentiment temps réel</h3>
+                        <p class="project-date">Novembre 2025</p>
+                        <p class="project-desc">
+                            Pipeline complet d'analyse de sentiment sur flux de tweets en temps réel. 
+                            Spark Streaming, Kafka, ML avec régression logistique (AUC 0.89). Traitement emojis et bigrammes.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">PySpark</span>
+                            <span class="tag">Kafka</span>
+                            <span class="tag">HDFS</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Streaming</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>Défis relevés :</strong>
+                            <ul>
+                                <li>Gestion de flux continus avec fenêtrage temporel</li>
+                                <li>Optimisation du modèle ML (tokenization, bigrammes, stop words)</li>
+                                <li>Pipeline complet streaming + machine learning + stockage distribué</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Réseau de neurones - Classification d'images -->
+                <article class="project-card" data-semestre="S5" data-date="2025-10-30" data-title="Classification Images" id="reseau-neurones">
+                    <div class="project-image">
+                        <img src="images/neurones.png" alt="Réseau de neurones">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S5</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Réseau de neurones - Classification d'images</h3>
+                        <p class="project-date">Octobre 2025</p>
+                        <p class="project-desc">
+                            Discrimination d'images base Wang avec perceptron multicouches et CNN. 
+                            Comparaison approche descripteurs FCTH vs deep learning. Vision par ordinateur.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">TensorFlow/Keras</span>
+                            <span class="tag">CNN</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Deep Learning</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>Défis relevés :</strong>
+                            <ul>
+                                <li>Architecture de réseaux convolutionnels (filtres, pooling)</li>
+                                <li>Comparaison méthodologique descripteurs vs CNN</li>
+                                <li>Évaluation rigoureuse (matrice de confusion)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Migration NoSQL -->
+                <article class="project-card" data-semestre="S5" data-date="2025-10-15" data-title="Migration NoSQL" id="migration-nosql">
+                    <div class="project-image">
+                        <img src="images/nosql.png" alt="Migration NoSQL">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S5</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Migration NoSQL - SQLite vers MongoDB</h3>
+                        <p class="project-date">Octobre 2025</p>
+                        <p class="project-desc">
+                            Migration complète d'une base relationnelle vers MongoDB. Restructuration modèle documentaire, 
+                            agrégations, tableau de bord avec cartes interactives.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>Défis relevés :</strong>
+                            <ul>
+                                <li>Repenser la structure relationnelle en modèle documentaire</li>
+                                <li>Automatisation de la migration avec Python</li>
+                                <li>Maîtrise des agrégations MongoDB complexes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Outil décisionnel VCOD -->
+                <article class="project-card" data-semestre="S5" data-date="2025-12-20" data-title="Outil décisionnel VCOD" id="vcod">
+                    <div class="project-image">
+                        <img src="images/vcod.png" alt="Outil décisionnel">
+                        <div class="project-overlay">
+                            <span class="project-semestre">S5</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SAÉ VCOD - Outil décisionnel MYDental BI</h3>
+                        <p class="project-date">Décembre 2025</p>
+                        <p class="project-desc">
+                            Refonte de l'application décisionnelle pour cabinets dentaires. Simulateur de rentabilité, 
+                            indicateurs complémentaires, analyse métier, gestion Git structurée.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">BI</span>
+                            <span class="tag">Git/GitHub</span>
+                            <span class="tag">Analyse métier</span>
+                        </div>
+                        <div class="project-difficulty">
+                            <strong>Défis relevés :</strong>
+                            <ul>
+                                <li>Charge de travail importante (binôme pour projet de 4)</li>
+                                <li>Traduction de règles métiers complexes en algorithmes</li>
+                                <li>Conception d'indicateurs stratégiques pertinents</li>
                             </ul>
                         </div>
                     </div>
