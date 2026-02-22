@@ -7,41 +7,65 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortSelect = document.getElementById('sort-select');
     const projectsContainer = document.getElementById('projects-container');
 
+    // État des filtres
+    let currentSemestreFilter = 'all';
+    let currentMetierFilter = 'all';
+
     // Filtrage des projets
     if (filterBtns.length > 0) {
         filterBtns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // Retirer la classe active de tous les boutons
-                filterBtns.forEach(b => b.classList.remove('active'));
+                const filterType = this.getAttribute('data-type');
+                const filter = this.getAttribute('data-filter');
+
+                // Retirer la classe active uniquement des boutons du même type
+                filterBtns.forEach(b => {
+                    if (b.getAttribute('data-type') === filterType) {
+                        b.classList.remove('active');
+                    }
+                });
+                
                 // Ajouter la classe active au bouton cliqué
                 this.classList.add('active');
 
-                const filter = this.getAttribute('data-filter');
+                // Mettre à jour l'état du filtre approprié
+                if (filterType === 'semestre') {
+                    currentSemestreFilter = filter;
+                } else if (filterType === 'metier') {
+                    currentMetierFilter = filter;
+                }
 
-                projectCards.forEach(card => {
-                    const semestre = card.getAttribute('data-semestre');
-                    
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else if (semestre && semestre.includes(filter)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.9)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
+                // Appliquer les filtres
+                applyFilters();
             });
+        });
+    }
+
+    // Fonction pour appliquer les filtres combinés
+    function applyFilters() {
+        projectCards.forEach(card => {
+            const semestre = card.getAttribute('data-semestre');
+            const metiers = card.getAttribute('data-metiers');
+            
+            let showBySemestre = currentSemestreFilter === 'all' || 
+                                 (semestre && semestre.includes(currentSemestreFilter));
+            
+            let showByMetier = currentMetierFilter === 'all' || 
+                              (metiers && metiers.includes(currentMetierFilter));
+            
+            if (showBySemestre && showByMetier) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
         });
     }
 
@@ -681,6 +705,205 @@ document.addEventListener('DOMContentLoaded', function() {
                 'Analyste de gestion',
                 'Développeur d\'outils métier',
                 'Business Analyst'
+            ]
+        },
+        'chatbox': {
+            title: 'Chatbox Portfolio IA - Système RAG',
+            date: 'Décembre 2025',
+            description: `
+                <p>Création d'un portfolio interactif reposant sur un modèle de langage avec architecture RAG 
+                (Retrieval-Augmented Generation). Ce projet dépasse le format classique du portfolio statique en 
+                développant un outil capable d'interagir de manière fluide avec l'utilisateur.</p>
+                
+                <h4>Architecture et fonctionnalités</h4>
+                <ul>
+                    <li><strong>Système RAG complet :</strong> Indexation des données de profil, segmentation en unités 
+                    cohérentes, transformation en vecteurs pour recherche sémantique.</li>
+                    <li><strong>Base vectorielle :</strong> Mise en place d'une base ChromaDB pour récupération rapide 
+                    et pertinente des documents, avec génération d'embeddings.</li>
+                    <li><strong>Intégration LLM :</strong> Sélection automatique des informations pertinentes et 
+                    génération de réponses structurées via prompt engineering.</li>
+                    <li><strong>Interface Streamlit :</strong> Développement d'une interface conversationnelle intuitive 
+                    déployée sur Streamlit Cloud.</li>
+                </ul>
+                
+                <h4>Technologies utilisées</h4>
+                <p>Python, Streamlit, ChromaDB, LLM (modèle de langage), embeddings, Git/GitHub</p>
+            `,
+            challenges: [
+                'Maîtrise complète de la chaîne RAG (indexation, récupération, génération)',
+                'Segmentation et vectorisation intelligente des données de profil',
+                'Déploiement d\'une application IA en ligne avec gestion des dépendances',
+                'Code modulaire, clair et documenté pour maintenance future',
+                'Gestion autonome de tous les aspects (technique, conceptuel, ergonomique)'
+            ],
+            metiers: [
+                'Ingénieur IA',
+                'Machine Learning Engineer',
+                'Développeur d\'applications IA',
+                'Data Scientist',
+                'Architecte RAG / Ingénieur en systèmes d\'information avancés'
+            ]
+        },
+        'big-data': {
+            title: 'Big Data - Analyse de sentiment temps réel',
+            date: 'Novembre 2025',
+            description: `
+                <p>Construction d'un pipeline complet d'analyse de sentiment en temps réel sur flux de tweets, 
+                mêlant streaming, machine learning et stockage distribué. Projet réalisé en binôme.</p>
+                
+                <h4>Architecture du pipeline</h4>
+                <ul>
+                    <li><strong>Spark Structured Streaming :</strong> Traitement de flux continus de tweets reçus 
+                    depuis un serveur TCP, avec fenêtrage temporel et agrégation dynamique.</li>
+                    <li><strong>Kafka :</strong> Gestion des flux de données en temps réel pour assurer la scalabilité.</li>
+                    <li><strong>Machine Learning :</strong> Modèle de régression logistique pour classification de 
+                    sentiment (positif/négatif) avec AUC de 0.8906.</li>
+                    <li><strong>HDFS :</strong> Stockage distribué des données pour traitement Big Data.</li>
+                </ul>
+                
+                <h4>Optimisations du modèle</h4>
+                <ul>
+                    <li><strong>Traitement des emojis :</strong> Intégration des emojis pour préserver la dimension 
+                    émotionnelle des tweets.</li>
+                    <li><strong>Bigrammes :</strong> Utilisation d'approche bigramme pour capturer le contexte.</li>
+                    <li><strong>Stop words ajustés :</strong> Conservation de mots comme "pas", "plus", "jamais" 
+                    essentiels pour la polarité.</li>
+                </ul>
+            `,
+            challenges: [
+                'Gestion de flux continus avec fenêtrage temporel et gestion des données tardives',
+                'Optimisation du modèle ML (tokenization, bigrammes, stop words personnalisés)',
+                'Pipeline complet mêlant streaming, machine learning et stockage distribué',
+                'Atteinte d\'une AUC de 0.8906 dépassant l\'objectif fixé',
+                'Collaboration efficace en binôme sur architecture complexe'
+            ],
+            metiers: [
+                'Data Scientist',
+                'Machine Learning Engineer',
+                'Data Engineer',
+                'Analyste Big Data',
+                'Ingénieur en systèmes distribués'
+            ]
+        },
+        'reseau-neurones': {
+            title: 'Réseau de neurones - Classification d\'images',
+            date: 'Octobre 2025',
+            description: `
+                <p>Projet de discrimination d'images de la base Wang utilisant deux approches : classification 
+                via descripteurs préexistants (FCTH) et apprentissage profond avec réseaux convolutionnels (CNN).</p>
+                
+                <h4>Première approche : Descripteurs FCTH</h4>
+                <ul>
+                    <li><strong>Exploitation de descripteurs :</strong> Transformation des images en vecteurs de 
+                    caractéristiques FCTH (Fuzzy Color and Texture Histogram).</li>
+                    <li><strong>Perceptron multicouches :</strong> Réseau entièrement connecté avec Keras/TensorFlow 
+                    pour associer chaque vecteur à l'une des 10 classes.</li>
+                    <li><strong>Optimisation :</strong> Test de plusieurs configurations d'hyperparamètres pour 
+                    maximiser la précision.</li>
+                </ul>
+                
+                <h4>Deuxième approche : Deep Learning (CNN)</h4>
+                <ul>
+                    <li><strong>Couches convolutionnelles :</strong> Apprentissage direct des représentations visuelles 
+                    à partir des images brutes.</li>
+                    <li><strong>Architecture :</strong> Test de différentes configurations (nombre de filtres, taille 
+                    des couches de convolution, pooling).</li>
+                    <li><strong>Évaluation :</strong> Matrice de confusion et métriques d'erreur pour identifier les 
+                    classes les plus difficiles à distinguer.</li>
+                </ul>
+            `,
+            challenges: [
+                'Architecture de réseaux convolutionnels (filtres, pooling, activation)',
+                'Comparaison méthodologique entre descripteurs préexistants et CNN',
+                'Évaluation rigoureuse avec matrices de confusion',
+                'Identification des limites de chaque stratégie',
+                'Compréhension de quand le deep learning est plus adapté'
+            ],
+            metiers: [
+                'Data Scientist',
+                'Computer Vision Engineer',
+                'Machine Learning Engineer',
+                'Développeur en intelligence artificielle',
+                'Ingénieur en traitement d\'images'
+            ]
+        },
+        'migration-nosql': {
+            title: 'Migration NoSQL - SQLite vers MongoDB',
+            date: 'Octobre 2025',
+            description: `
+                <p>Migration complète d'une base de données relationnelle SQLite vers MongoDB, nécessitant une 
+                restructuration en modèle documentaire. Projet réalisé en groupe de trois.</p>
+                
+                <h4>Étapes du projet</h4>
+                <ul>
+                    <li><strong>Analyse de la base SQLite :</strong> Exploration avec requêtes SQL pour comprendre 
+                    la structure, les relations et les comportements des données.</li>
+                    <li><strong>Modélisation NoSQL :</strong> Repenser l'organisation relationnelle en modèle 
+                    documentaire adapté à MongoDB. Définition de collections et documents cohérents.</li>
+                    <li><strong>Script de migration Python :</strong> Développement d'un script automatisant la 
+                    transformation et l'insertion des données dans MongoDB.</li>
+                    <li><strong>Réplication des requêtes :</strong> Adaptation des requêtes SQL en agrégations 
+                    MongoDB pour vérifier la cohérence de la migration.</li>
+                    <li><strong>Tableau de bord :</strong> Création de visualisations (graphiques, cartes interactives) 
+                    exploitant la base migrée avec Streamlit/Flask.</li>
+                </ul>
+            `,
+            challenges: [
+                'Repenser la structure relationnelle en modèle documentaire',
+                'Automatisation de la migration avec Python (transformation des relations)',
+                'Maîtrise des agrégations MongoDB complexes',
+                'Gestion des relations entre documents (embedded vs referenced)',
+                'Organisation collaborative du travail en groupe de trois'
+            ],
+            metiers: [
+                'Data Engineer',
+                'Data Analyst',
+                'Développeur Back-End orienté data',
+                'Analyste BI',
+                'Ingénieur en bases de données',
+                'Consultant en transformation numérique'
+            ]
+        },
+        'vcod': {
+            title: 'SAÉ VCOD - Outil décisionnel MYDental BI',
+            date: 'Décembre 2025',
+            description: `
+                <p>Refonte de l'application décisionnelle MYDental BI pour cabinets dentaires. Projet initialement 
+                prévu pour 4 personnes, réalisé en binôme avec prise en charge importante de l'ensemble des aspects.</p>
+                
+                <h4>Analyse et correction</h4>
+                <ul>
+                    <li><strong>Analyse de la structure des données :</strong> Compréhension approfondie de la base 
+                    existante pour identifier les incohérences.</li>
+                    <li><strong>Correction des indicateurs :</strong> Identification et résolution des erreurs dans 
+                    les métriques de l'application initiale.</li>
+                </ul>
+                
+                <h4>Développements réalisés</h4>
+                <ul>
+                    <li><strong>Simulateur de rentabilité :</strong> Outil mesurant la marge brute associée à chaque 
+                    acte réalisé par les praticiens. Traduction de règles métiers complexes en algorithmes.</li>
+                    <li><strong>Indicateurs complémentaires :</strong> Proposition et implémentation d'indicateurs 
+                    stratégiques pour anticiper les problématiques de gestion du cabinet.</li>
+                    <li><strong>Gestion Git structurée :</strong> Travail avec branches de développement claires et 
+                    intégration propre des fonctionnalités.</li>
+                </ul>
+            `,
+            challenges: [
+                'Charge de travail importante (binôme pour projet de 4 personnes)',
+                'Traduction de règles métiers complexes (économie cabinet dentaire) en algorithmes',
+                'Conception d\'indicateurs stratégiques pertinents',
+                'Analyse métier approfondie pour identifier les besoins du cabinet',
+                'Production de code lisible, maintenable et conforme aux bonnes pratiques'
+            ],
+            metiers: [
+                'Data Analyst',
+                'Data Engineer',
+                'Concepteur d\'outils décisionnels',
+                'Analyste BI',
+                'Consultant en systèmes d\'information',
+                'Développeur orienté data / BI'
             ]
         }
     };
