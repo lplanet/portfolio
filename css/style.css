@@ -14,6 +14,16 @@
     --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
     --transition: all 0.3s ease;
+    
+    /* Couleurs des compétences */
+    --comp-1-primary: #4a90e2;
+    --comp-1-secondary: #357abd;
+    --comp-2-primary: #27ae60;
+    --comp-2-secondary: #1e8449;
+    --comp-3-primary: #f39c12;
+    --comp-3-secondary: #d68910;
+    --comp-4-primary: #9b59b6;
+    --comp-4-secondary: #7d3c98;
 }
 
 /* Reset & Base */
@@ -633,161 +643,212 @@ a:hover {
 }
 
 /* Skills Section */
-.skills-tech-section {
+/* Compétences BUT Maquette */
+.competences-but-section {
     padding: 4rem 0;
+    background: var(--light-bg);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.skill-category {
+.competence-card {
     background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-}
-
-.skill-category h3 {
-    margin-bottom: 1.5rem;
-    color: var(--primary-dark);
-}
-
-.skill-list {
-    margin-bottom: 1rem;
-}
-
-.skill-item {
-    margin-bottom: 1rem;
-}
-
-.skill-name {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: var(--text-dark);
-}
-
-.skill-bar {
-    height: 6px;
-    background: var(--border-color);
-    border-radius: 50px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
     overflow: hidden;
+    transition: var(--transition);
 }
 
-.skill-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
-    border-radius: 50px;
+.competence-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
 }
 
-.skill-tools {
-    font-size: 0.875rem;
-    color: var(--text-light);
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+.competence-card.highlighted {
+    border: 2px solid var(--comp-4-primary);
 }
 
-/* Soft Skills */
-.soft-skills-section {
-    padding: 4rem 0;
-    background: var(--light-bg);
+/* Couleurs spécifiques par compétence */
+.comp-1 .competence-header {
+    background: linear-gradient(135deg, var(--comp-1-primary) 0%, var(--comp-1-secondary) 100%);
 }
 
-.soft-skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.comp-2 .competence-header {
+    background: linear-gradient(135deg, var(--comp-2-primary) 0%, var(--comp-2-secondary) 100%);
 }
 
-.soft-skill-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+.comp-3 .competence-header {
+    background: linear-gradient(135deg, var(--comp-3-primary) 0%, var(--comp-3-secondary) 100%);
 }
 
-.soft-skill-icon {
+.comp-4 .competence-header {
+    background: linear-gradient(135deg, var(--comp-4-primary) 0%, var(--comp-4-secondary) 100%);
+}
+
+.competence-header {
+    color: var(--white);
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.competence-icon {
     font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.evidence-tag {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background: var(--light-bg);
-    color: var(--primary-blue);
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 500;
-}
-
-/* Qualities & Defects */
-.qualities-defects-section {
-    padding: 4rem 0;
-}
-
-.qualities-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 3rem;
-}
-
-.quality-item,
-.defect-item {
-    background: var(--white);
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 1.5rem;
-}
-
-.quality-item h4,
-.defect-item h4 {
-    color: var(--primary-blue);
-    margin-bottom: 0.75rem;
-}
-
-.evidence,
-.action {
-    display: block;
-    margin-top: 0.75rem;
-    padding: 0.75rem;
-    background: var(--light-bg);
-    border-radius: 8px;
-    font-size: 0.875rem;
-    color: var(--text-dark);
-}
-
-/* Work Style */
-.work-style-section {
-    padding: 4rem 0;
-    background: var(--light-bg);
-}
-
-.intro-text {
-    font-size: 1.125rem;
-    color: var(--text-dark);
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    min-width: 60px;
     text-align: center;
 }
 
-.work-style-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+.competence-header h2 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1.75rem;
+    flex: 1;
 }
 
-.work-style-item {
-    background: var(--white);
+.parcours-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.competence-levels {
+    padding: 0;
+}
+
+.competence-level {
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.competence-level:last-child {
+    border-bottom: none;
+}
+
+.competence-level h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.level-badge {
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.comp-1 .level-badge {
+    background: var(--comp-1-primary);
+}
+
+.comp-2 .level-badge {
+    background: var(--comp-2-primary);
+}
+
+.comp-3 .level-badge {
+    background: var(--comp-3-primary);
+}
+
+.comp-4 .level-badge {
+    background: var(--comp-4-primary);
+}
+
+.competence-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.competence-items li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.competence-items li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.comp-1 .competence-items li::before {
+    color: var(--comp-1-primary);
+}
+
+.comp-2 .competence-items li::before {
+    color: var(--comp-2-primary);
+}
+
+.comp-3 .competence-items li::before {
+    color: var(--comp-3-primary);
+}
+
+.comp-4 .competence-items li::before {
+    color: var(--comp-4-primary);
+}
+
+.projets-associes {
+    background: var(--light-bg);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.projets-associes strong {
+    color: var(--primary-dark);
+    margin-right: 0.5rem;
+}
+
+.comp-1 .projets-associes a {
+    color: var(--comp-1-primary);
+}
+
+.comp-2 .projets-associes a {
+    color: var(--comp-2-primary);
+}
+
+.comp-3 .projets-associes a {
+    color: var(--comp-3-primary);
+}
+
+.comp-4 .projets-associes a {
+    color: var(--comp-4-primary);
+}
+
+.projets-associes a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.projets-associes a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.projets-associes a::after {
+    content: "";
+    margin: 0 0.3rem;
 }
 
 /* Vision Section */
@@ -1446,6 +1507,42 @@ background: var(--light-bg);
         font-size: 0.8rem;
         padding: 0.5rem 1rem;
     }
+    
+    /* Compétences responsive */
+    .competence-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+    
+    .competence-icon {
+        font-size: 2.5rem;
+    }
+    
+    .competence-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .parcours-badge {
+        position: static;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+    
+    .competence-level {
+        padding: 1.5rem;
+    }
+    
+    .competence-level h3 {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.1rem;
+    }
+    
+    .competence-items li {
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1482,5 +1579,32 @@ background: var(--light-bg);
     
     .modal-metiers {
         padding: 1.5rem;
+    }
+    
+    /* Compétences mobile */
+    .competence-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .competence-icon {
+        font-size: 2rem;
+    }
+    
+    .competence-header h2 {
+        font-size: 1.25rem;
+    }
+    
+    .level-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .competence-level {
+        padding: 1rem;
+    }
+    
+    .projets-associes {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
     }
 }
