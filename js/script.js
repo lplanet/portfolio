@@ -1032,5 +1032,38 @@ document.addEventListener('DOMContentLoaded', function() {
         openModalFromHash();
     }
 
+    // Gestion des onglets pour la page Stage
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (tabBtns.length > 0 && tabPanes.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Retirer active de tous les boutons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Ajouter active au bouton cliqué
+                this.classList.add('active');
+                
+                // Cacher tous les panneaux
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Afficher le panneau cible
+                const targetPane = document.getElementById(targetTab);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+
+                // Scroll vers le haut du contenu
+                document.querySelector('.tabs-content').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest' 
+                });
+            });
+        });
+    }
+
     console.log('Portfolio Leslie Planet - JavaScript chargé ✅');
 });
