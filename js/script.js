@@ -981,5 +981,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Ouverture automatique de la modal si un hash est présent dans l'URL
+    function openModalFromHash() {
+        const hash = window.location.hash;
+        if (hash && hash.length > 1) {
+            const projectId = hash.substring(1); // Enlever le '#'
+            const projectCard = document.getElementById(projectId);
+            const projectData = projectsData[projectId];
+            
+            if (projectCard && projectData && modal && modalBody) {
+                // Remplir la modale avec les données du projet
+                modalBody.innerHTML = `
+                    <h2>${projectData.title}</h2>
+                    <p class="modal-date">${projectData.date}</p>
+                    
+                    <div class="modal-section">
+                        <h3>Description détaillée</h3>
+                        ${projectData.description}
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3>Difficultés abordées</h3>
+                        <ul class="challenges-list">
+                            ${projectData.challenges.map(challenge => `<li>${challenge}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div class="modal-section modal-metiers">
+                        <h3>Métiers associés</h3>
+                        <div class="metiers-tags">
+                            ${projectData.metiers.map(metier => `<span class="metier-tag">${metier}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                // Afficher la modale
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Scroller vers le projet (au cas où)
+                setTimeout(() => {
+                    projectCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        }
+    }
+    
+    // Appeler la fonction au chargement si on est sur la page projets
+    if (modal && modalBody) {
+        openModalFromHash();
+    }
+
     console.log('Portfolio Leslie Planet - JavaScript chargé ✅');
 });
