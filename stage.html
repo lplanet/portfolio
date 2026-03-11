@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage IMA - Leslie Planet</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Leslie Planet</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="stage.html" class="nav-link active">Stage</a></li>
+                <li><a href="avenir.html" class="nav-link">Avenir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Stage - Inter Mutuelles Assistance</h1>
+            <p class="page-subtitle">Analyste de Données au sein du pôle Analyses et Pilotage | 10 semaines (Mars - Juin 2025)</p>
+        </div>
+    </section>
+
+    <section class="stage-overview">
+        <div class="container">
+            <div class="overview-card">
+                <h2>🏢 L'entreprise IMA</h2>
+                <p><strong>Inter Mutuelles Assistance (IMA)</strong> est une société d'assistance créée en 1981 par trois grandes mutuelles niortaises (MAIF, MACIF, MAAF). Acteur majeur de l'assistance en France et dans le monde, IMA accompagne plus de 7 millions de bénéficiaires 24h/24 et 7j/7.</p>
+                
+                <div class="ima-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6 119</span>
+                        <span class="stat-label">salariés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15,9M</span>
+                        <span class="stat-label">appels en 2024</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">91,8%</span>
+                        <span class="stat-label">satisfaction clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">pays d'implantation</span>
+                    </div>
+                </div>
+
+                <div class="secteurs">
+                    <h3>4 secteurs d'activité principaux :</h3>
+                    <ul>
+                        <li><strong>Mobilité</strong> - Assistance automobile, dépannage, remorquage</li>
+                        <li><strong>Habitat</strong> - Gestion sinistres, travaux urgents, télésurveillance</li>
+                        <li><strong>Santé & Bien-vivre</strong> - Assistance individuelle, téléconsultation</li>
+                        <li><strong>Juridique</strong> - Information juridique, conciliation, formation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <h2>🎯 Mon rôle</h2>
+                <p>J'ai intégré la <strong>Direction Réseaux Groupe</strong>, au sein du service <strong>Analyses et Pilotage</strong>. Ce service produit le reporting destiné à l'animation des entreprises partenaires du groupe IMA.</p>
+                
+                <p><strong>Missions principales :</strong></p>
+                <ul>
+                    <li>Traitement et analyse de données internes</li>
+                    <li>Production de rapports mensuels et trimestriels</li>
+                    <li>Automatisation de processus via macros VBA</li>
+                    <li>Réalisation de cartographies opérationnelles</li>
+                    <li>Amélioration de la qualité et lisibilité des données</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="missions-section">
+        <div class="container">
+            <h2>Mes missions détaillées</h2>
+            
+            <!-- Système d'onglets -->
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="recurrentes">Missions récurrentes</button>
+                    <button class="tab-btn" data-tab="ponctuelles">Missions ponctuelles</button>
+                    <button class="tab-btn" data-tab="projets">Projets stratégiques</button>
+                    <button class="tab-btn" data-tab="competences">Compétences acquises</button>
+                    <button class="tab-btn" data-tab="bilan">Bilan personnel</button>
+                </div>
+
+                <div class="tabs-content">
+                    <!-- Tab 1: Missions récurrentes -->
+                    <div class="tab-pane active" id="recurrentes">
+                        <h3>📊 Missions récurrentes (mensuelles/trimestrielles)</h3>
+                        
+                        <div class="mission-item">
+                            <h4>1. Traitement des données dans Business Objects (BO)</h4>
+                            <p>Actualisation mensuelle des données issues de l'entrepôt de données :</p>
+                            <ul>
+                                <li>Import et mise à jour des dossiers traités par l'assistance</li>
+                                <li>Gestion de requêtes complexes (10-30 min d'exécution par requête)</li>
+                                <li>Production de synthèses mensuelles sur les prestations (dépannage, hébergement, transport)</li>
+                                <li>Création de versions trimestrielles pour le suivi long terme</li>
+                            </ul>
+                            <p class="challenge"><strong>Défi :</strong> Gérer la lenteur de l'outil due au nombre élevé d'utilisateurs simultanés → planification rigoureuse des tâches</p>
+                        </div>
+
+                        <div class="mission-item">
+                            <h4>2. Actualisation de la base BILBO</h4>
+                            <p>Suivi des volumes d'intervention liés aux dépannages et remorquages :</p>
+                            <ul>
+                                <li>Consolidation de données issues de sources multiples (DSP, FD ELEC, FD, MNT)</li>
+                                <li>Croisement avec l'état des compétences des garages (marques, zones d'intervention, priorités 0-9)</li>
+                                <li>Intégration dans le tableau de bord (taux DSP, missions acceptées, délais d'intervention)</li>
+                                <li>Identification d'écarts entre sources pour garantir la fiabilité</li>
+                            </ul>
+                            <p class="achievement"><strong>Résultat :</strong> Approfondissement des structures Excel complexes et procédures d'automatisation</p>
+                        </div>
+
+                        <div class="mission-item">
+                            <h4>3. Mise à jour des bases du réseau santé</h4>
+                            <p>Gestion des bases de prestataires intervenant à domicile :</p>
+                            <ul>
+                                <li>Corps de métiers : auxiliaires de vie (AUXI), garde d'enfants, aide à domicile (MENA), nettoyage (NETO), jardinage (JARDI)</li>
+                                <li>Actualisation des coordonnées et zones d'intervention</li>
+                                <li>Mise à jour des cartes associées</li>
+                            </ul>
+                        </div>
+
+                        <div class="mission-item">
+                            <h4>4. Suivi des bases communales et anomalies</h4>
+                            <p>Mise en qualité des données géographiques :</p>
+                            <ul>
+                                <li><strong>Actualisation trimestrielle</strong> de la base des communes (fusions, créations, suppressions) via la base INSEE</li>
+                                <li><strong>Correction des anomalies de saisie</strong> : correspondance automatique des saisies erronées au bon code INSEE</li>
+                                <li><strong>Impact critique</strong> : éviter les erreurs de localisation qui faussent les zones de couverture</li>
+                            </ul>
+                            <p class="insight"><strong>Apprentissage :</strong> Importance cruciale de la qualité des données pour les décisions opérationnelles</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Missions ponctuelles -->
+                    <div class="tab-pane" id="ponctuelles">
+                        <h3>⚡ Missions ponctuelles</h3>
+                        
+                        <div class="mission-item highlighted">
+                            <h4>1. Création d'une macro VBA et cartographie pour les ODS Santé</h4>
+                            <p class="context"><strong>Contexte :</strong> Les ODS (Offres De Services) sont des formulaires soumis en ligne par des professionnels souhaitant rejoindre le réseau IMA. Format HTM avec structure non fixe → automatisation complexe.</p>
+                            
+                            <h5>🔧 Développement de la macro (5 modules) :</h5>
+                            <ul>
+                                <li><strong>Module IMPORT</strong> : Conversion HTM → XLSX avec extraction intelligente des données (recherche par nom de colonne)</li>
+                                <li><strong>Module COPIE</strong> : Vérification/création du dossier annuel, renommage automatique, suppression des sources</li>
+                                <li><strong>Module RECAP</strong> : Centralisation dans fichier annuel, détection des doublons, ajout de liens hypertextes</li>
+                                <li><strong>Module VIDER</strong> : Nettoyage du tableau</li>
+                                <li><strong>Module BOUTON</strong> : Gestion de navigation séquentielle (Import → Copie → Effacer → Fin)</li>
+                            </ul>
+
+                            <h5>🗺️ Cartographie interactive avec Articque :</h5>
+                            <ul>
+                                <li><strong>Visualisation</strong> : 4 métiers prioritaires (auxiliaires de vie, aide à domicile, garde enfants -3ans, +3ans)</li>
+                                <li><strong>Géolocalisation</strong> : Adresse + code postal + ville, sinon code INSEE en fallback</li>
+                                <li><strong>Zones de maillage</strong> : Représentation des périmètres couverts (20 km autour du siège)</li>
+                                <li><strong>Identification des carences</strong> : Zones avec appels mais aucun prestataire disponible (dégradé de couleur par région)</li>
+                                <li><strong>Distinction</strong> : France métropolitaine / DOM sur feuilles séparées</li>
+                            </ul>
+
+                            <p class="achievement"><strong>Impact :</strong> Outil stratégique pour orienter la prospection vers les zones à besoin réel</p>
+                            <p class="learning"><strong>Découverte :</strong> Articque (logique d'organigramme) → plus intuitif que QGIS pour ce cas d'usage</p>
+                        </div>
+
+                        <div class="mission-item">
+                            <h4>2. Réflexions sur l'automatisation ASAN </h4>
+                            <p class="context"><strong>Contexte :</strong> Le service ASAN (Avions SANitaires) souhaite remplacer la saisie manuelle hebdomadaire par un import automatisé des dossiers d'évacuations sanitaires.</p>
+                            
+                            <h5>Objectifs du projet (en phase de cadrage) :</h5>
+                            <ul>
+                                <li>Sélection du dossier hebdomadaire (structure : dossier par semaine)</li>
+                                <li>Validation de la conformité des fichiers Excel (colonnes attendues, format correct)</li>
+                                <li>Signalement des fichiers non conformes avec nom et cause</li>
+                                <li>Consolidation dans tableau final standardisé</li>
+                                <li>Suivi particulier des indicateurs coûts : <strong>poses carburants</strong> et <strong>night stops</strong></li>
+                            </ul>
+
+                            <p class="contribution"><strong>Ma contribution :</strong> Participation à la phase de cadrage fonctionnel, identification des contraintes techniques, propositions de structuration</p>
+                            <p class="note">Projet à poursuivre après mon départ, forte montée en charge en période estivale</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Projets stratégiques -->
+                    <div class="tab-pane" id="projets">
+                        <h3>🚀 Projets stratégiques</h3>
+                        
+                        <div class="mission-item highlighted">
+                            <h4>1. PRAXEDO : Centralisation des prospects</h4>
+                            <p class="context"><strong>Problématique :</strong> Les 16 Responsables de Secteur (RS) gèrent leurs prospects de manière disparate (mémoire, fichiers personnels) → aucune vue consolidée.</p>
+                            
+                            <h5>Solution développée :</h5>
+                            <ul>
+                                <li><strong>Import dans PRAXEDO</strong> de 2 sources : ODS (Offres De Service) et OCCAS (Occasionnels)</li>
+                                <li><strong>Préfixes normalisés</strong> : ODS_ et OCCAS_ dans le champ description</li>
+                                <li><strong>Données complètes</strong> : raison sociale, coordonnées, géolocalisation (longitude/latitude), périmètre d'intervention</li>
+                                <li><strong>Contrôle qualité</strong> : Croisement avec base prestataires IMA via SIRET pour éviter les doublons</li>
+                            </ul>
+
+                            <h5>Phase de test :</h5>
+                            <ul>
+                                <li>2 RS pilotes sélectionnés</li>
+                                <li>Démonstration et accompagnement à la prise en main</li>
+                                <li>Collecte de retours utilisateurs (lisibilité, utilité, suggestions)</li>
+                                <li>Déploiement progressif vers les 14 autres RS</li>
+                            </ul>
+
+                            <p class="achievement"><strong>Bénéfice attendu :</strong> Référentiel commun pour détecter les opportunités de partenariat local, notamment dans les métiers déficitaires (plomberie, serrurerie, vitrerie)</p>
+                        </div>
+
+                        <div class="mission-item highlighted">
+                            <h4>2. Analyse du maillage des grandes agglomérations</h4>
+                            <p class="context"><strong>Objectif :</strong> Identifier les zones à réseau insuffisant au regard du volume de demandes dans les grandes villes françaises (Marseille, Bordeaux, Lille...).</p>
+                            
+                            <h5>Méthodologie :</h5>
+                            <ul>
+                                <li><strong>Source</strong> : Fichier mensuel des sinistres (type véhicule, localisation, prestataire intervenu, date/heure, nature résolution)</li>
+                                <li><strong>Normalisation</strong> : Croisement avec référentiel interne des communes (codes INSEE, arrondissements, système "recherche ville" IMA)</li>
+                                <li><strong>Enrichissement</strong> : Ajout de données géographiques fiables</li>
+                            </ul>
+
+                            <h5>Indicateurs produits (via Articque) :</h5>
+                            <ul>
+                                <li><strong>Taux de couverture</strong> : Nb sinistres / Nb prestataires actifs</li>
+                                <li><strong>Répartition par métier</strong></li>
+                                <li><strong>Distance moyenne</strong> : Lieu sinistre ↔ Prestataire intervenu</li>
+                                <li><strong>Zones de monopole</strong> : Secteurs où 1 seul prestataire réalise la quasi-totalité des interventions</li>
+                            </ul>
+
+                            <p class="achievement"><strong>Impact :</strong> Décision éclairée sur les zones prioritaires à renforcer pour les campagnes de recrutement</p>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Compétences acquises -->
+                    <div class="tab-pane" id="competences">
+                        <h3>💡 Compétences acquises</h3>
+                        
+                        <div class="competences-grid">
+                            <div class="competence-category">
+                                <h4>🔧 Compétences techniques</h4>
+                                <ul>
+                                    <li><strong>Excel avancé</strong> : Structures complexes, formules imbriquées, tableaux croisés dynamiques</li>
+                                    <li><strong>VBA</strong> : Création de macros multi-modules, gestion de fichiers, automatisation de workflows</li>
+                                    <li><strong>Business Objects (BO)</strong> : Interrogation d'entrepôts de données, actualisation de requêtes</li>
+                                    <li><strong>Articque</strong> : Cartographie opérationnelle, logique d'organigramme, discrétisation, superposition de couches</li>
+                                    <li><strong>PRAXEDO</strong> : Import de données, gestion de bases prospects</li>
+                                    <li><strong>Manipulation de données</strong> : Croisement, normalisation, contrôle qualité, géolocalisation</li>
+                                </ul>
+                            </div>
+
+                            <div class="competence-category">
+                                <h4>📋 Compétences méthodologiques</h4>
+                                <ul>
+                                    <li><strong>Rigueur</strong> : Validation systématique, vérification des données, contrôles de cohérence</li>
+                                    <li><strong>Gestion du temps</strong> : Planification face aux contraintes techniques (lenteur BO), respect d'échéances mensuelles/trimestrielles</li>
+                                    <li><strong>Autonomie</strong> : Prise en main d'outils inconnus (Articque, PRAXEDO), recherche de solutions</li>
+                                    <li><strong>Organisation</strong> : Gestion simultanée de missions récurrentes et projets ponctuels</li>
+                                    <li><strong>Documentation</strong> : Constitution de procédures pour pérenniser les processus</li>
+                                </ul>
+                            </div>
+
+                            <div class="competence-category">
+                                <h4>🤝 Compétences relationnelles</h4>
+                                <ul>
+                                    <li><strong>Communication</strong> : Présentation de démonstrations (PRAXEDO), participation à des réunions de cadrage (ASAN)</li>
+                                    <li><strong>Écoute active</strong> : Compréhension des besoins utilisateurs (GOP, CGA, RS)</li>
+                                    <li><strong>Travail en équipe</strong> : Collaboration avec le pôle Analyse et Pilotage</li>
+                                    <li><strong>Adaptabilité</strong> : Prise en compte des retours à mi-parcours</li>
+                                </ul>
+                            </div>
+
+                            <div class="competence-category">
+                                <h4>🎯 Compétences transversales</h4>
+                                <ul>
+                                    <li><strong>Compréhension des enjeux métier</strong> : Lien entre qualité des données et décisions terrain</li>
+                                    <li><strong>Vision stratégique</strong> : Identification de zones de carence, optimisation de la prospection</li>
+                                    <li><strong>Esprit d'analyse</strong> : Détection d'anomalies, proposition d'améliorations</li>
+                                    <li><strong>Sens du service</strong> : Production d'outils facilitant le travail des utilisateurs finaux</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="competences-but">
+                            <h4>📚 Compétences BUT mobilisées</h4>
+                            <div class="but-mapping">
+                                <div class="but-item">
+                                    <span class="but-badge">C1 BUT3</span>
+                                    <p><strong>Traiter des données complexes</strong> : Maîtrise de sources multiples (BO, BILBO, ODS), normalisation, géolocalisation</p>
+                                </div>
+                                <div class="but-item">
+                                    <span class="but-badge">C2 BUT2</span>
+                                    <p><strong>Analyser statistiquement</strong> : Synthèses mensuelles, taux de couverture, distances moyennes, agrégations</p>
+                                </div>
+                                <div class="but-item">
+                                    <span class="but-badge">C3 BUT2</span>
+                                    <p><strong>Valoriser une production</strong> : Cartographies décisionnelles, rapports pour la GOP, démonstrations PRAXEDO</p>
+                                </div>
+                                <div class="but-item">
+                                    <span class="but-badge">C4 BUT3</span>
+                                    <p><strong>Développer un outil décisionnel (VCOD)</strong> : Macro VBA 5 modules, intégration PRAXEDO, workflow automatisé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Bilan personnel -->
+                    <div class="tab-pane" id="bilan">
+                        <h3>🎓 Bilan personnel</h3>
+                        
+                        <div class="bilan-section">
+                            <h4>✅ Points positifs</h4>
+                            <ul>
+                                <li><strong>Découverte du monde de l'entreprise</strong> : Codes professionnels, attentes en termes d'autonomie et de rigueur</li>
+                                <li><strong>Diversité des missions</strong> : Mix entre récurrent (stabilité) et ponctuel (challenge)</li>
+                                <li><strong>Montée en compétences technique</strong> : Articque (découverte), VBA (approfondissement), BO (initiation)</li>
+                                <li><strong>Prise de conscience de l'importance de la qualité des données</strong> : Impact direct sur les décisions terrain</li>
+                                <li><strong>Immersion dans un environnement stimulant</strong> : Entreprise à mission sociale, équipe bienveillante</li>
+                                <li><strong>Confirmation de mon orientation</strong> : Envie renforcée de travailler dans le domaine de la data</li>
+                            </ul>
+                        </div>
+
+                        <div class="bilan-section warning">
+                            <h4>⚠️ Axes d'amélioration identifiés</h4>
+                            
+                            <div class="improvement-item">
+                                <h5>1. Communication et assurance</h5>
+                                <p><strong>Constat :</strong> Manque d'assurance perçu dans les premières semaines</p>
+                                <p><strong>Retour mi-parcours :</strong> Manque de prise de notes</p>
+                                <p class="action-taken">✓ <strong>Actions prises :</strong> Amélioration progressive, plus d'aisance pour poser des questions, meilleure prise de notes structurées</p>
+                                <p class="result">→ Deuxième moitié du stage beaucoup plus enrichissante grâce aux échanges</p>
+                            </div>
+
+                            <div class="improvement-item">
+                                <h5>2. Gestion de la frustration face aux contraintes techniques</h5>
+                                <p><strong>Constat :</strong> Lenteur de BO (10-30 min par requête) frustrante au début</p>
+                                <p class="action-taken">✓ <strong>Actions prises :</strong> Planification des tâches en parallèle, optimisation des temps morts</p>
+                                <p class="result">→ Apprentissage de la patience et de la gestion efficace du temps</p>
+                            </div>
+
+                            <div class="improvement-item">
+                                <h5>3. Anticipation des besoins utilisateurs</h5>
+                                <p><strong>Constat :</strong> Tendance à se concentrer sur l'aspect technique au détriment de l'UX</p>
+                                <p class="action-taken">✓ <strong>Actions prises :</strong> Ajout de la distinction Métropole/DOM dans les ODS, création de liens hypertextes dans les recap</p>
+                                <p class="result">→ Meilleure prise en compte de l'utilisateur final</p>
+                            </div>
+                        </div>
+
+                        <div class="bilan-section positive">
+                            <h4>🌟 Enseignements clés</h4>
+                            <blockquote>
+                                <p>"La rigueur dans le traitement des données n'est pas une option, c'est une nécessité. Une erreur de géolocalisation peut faussement indiquer qu'une zone est couverte, alors qu'en réalité elle est en carence."</p>
+                            </blockquote>
+                            
+                            <blockquote>
+                                <p>"L'automatisation n'a de sens que si elle s'accompagne de contrôles robustes. Une macro qui importe des données erronées est pire qu'une saisie manuelle."</p>
+                            </blockquote>
+                            
+                            <blockquote>
+                                <p>"Les outils techniques (VBA, Articque, BO) sont des moyens, pas une fin. Ce qui compte, c'est l'impact sur les décisions opérationnelles et la valeur ajoutée pour les utilisateurs."</p>
+                            </blockquote>
+                        </div>
+
+                        <div class="bilan-section conclusion">
+                            <h4>🎯 Conclusion</h4>
+                            <p>Ce stage a été une <strong>étape déterminante</strong> dans mon parcours. Il m'a permis de confronter mes connaissances théoriques à la réalité terrain, de découvrir les enjeux concrets de la data dans un contexte professionnel, et de gagner en autonomie et en confiance.</p>
+                            
+                            <p>J'ai particulièrement apprécié :</p>
+                            <ul>
+                                <li>La <strong>diversité des missions</strong> (récurrent/ponctuel/stratégique)</li>
+                                <li>L'<strong>impact concret</strong> de mon travail sur les décisions terrain</li>
+                                <li>La <strong>bienveillance</strong> de l'équipe et la qualité de l'accompagnement</li>
+                            </ul>
+
+                            <p>Cette expérience a <strong>confirmé mon orientation professionnelle</strong> vers les métiers de la data, et plus particulièrement vers des environnements où les analyses ont un impact direct sur le terrain. Je souhaite poursuivre dans cette voie en combinant expertise technique (automatisation, cartographie, BI) et compréhension des enjeux métier.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Leslie Planet</h4>
+                    <p>Étudiante en BUT Science des Données</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="parcours.html">Parcours</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="stage.html">Stage</a></li>
+                        <li><a href="avenir.html">Avenir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: leslie.planet@example.com</p>
+                    <p>LinkedIn: leslie-planet</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Leslie Planet - Portfolio BUT Science des Données</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
