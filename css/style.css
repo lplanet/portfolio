@@ -1987,6 +1987,8 @@ background: var(--light-bg);
     padding: 1.5rem;
     border-radius: 8px;
     margin-top: 1rem;
+    list-style: none;
+    margin-left: 0;
 }
 
 .challenges-list li {

@@ -266,6 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <li><strong>Intégration prospects PRAXEDO :</strong> Adaptation à un outil métier spécifique pour intégrer 
                     de nouveaux prestataires dans le système.</li>
                 </ul>
+                <h4> Plus d'information</h4>
+                <p> Pour plus d'information sur le stage rapportez vous a la section "stage" ou cliquer sur le lien suivant :
+                <a href=stage.html>Stage IMA</a></p>
             `,
             challenges: [
                 'Gestion rigoureuse de données sensibles sous contrainte de temps',
