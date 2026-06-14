@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternance - Leslie Planet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Page dédiée à mon alternance / expérience en entreprise - contenu basé sur Rapport_V.1.3.0">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Leslie Planet</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                <li><a href="projets.html" class="nav-link">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="stage.html" class="nav-link">Stage</a></li>
+                <li><a href="alternance.html" class="nav-link active">Alternance</a></li>
+                <li><a href="avenir.html" class="nav-link">Avenir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Mon Alternance</h1>
+            <p class="page-subtitle">Résumé basé sur le `Rapport_LesliePLANET`. Remplacez ce texte par le contenu complet du rapport si désiré.</p>
+        </div>
+    </section>
+
+    <section class="stage-overview">
+        <div class="container">
+            <div class="overview-card">
+                <h2>L'entreprise</h2>
+                <p><strong>Pierre Guérin</strong> est une entreprise française spécialisée dans la conception et la fabrication de cuves, biofermenteurs et bioréacteurs, fondée en 1949 et intégrée au groupe Bouygues (Equans) depuis 2019. Elle emploie environ 450 collaborateurs et dessert des marchés internationaux.</p>
+                <p>Durant mon alternance, j'ai travaillé au sein du <strong>service chiffrage</strong>, chargé d'établir les devis clients en s'appuyant sur les données techniques des bureaux d'études (plans, réseaux, schémas électriques).</p>
+            </div>
+
+            <div class="overview-card">
+                <h2>Mon rôle</h2>
+                <p>Ma mission principale a été l'automatisation et la refonte du fichier de chiffrage pour les gammes PRIMO et EVO afin d'améliorer la fiabilité des estimations et la maintenabilité de l'outil.</p>
+                <ul>
+                    <li>Fusion des fichiers chiffrage et nomenclature et centralisation des données.</li>
+                    <li>Structuration d'une base de données des désignations et codes SAP.</li>
+                    <li>Mise en place d'outils d'aide à la saisie (matrice d'incompatibilités, feuilles support).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="missions-section">
+        <div class="container">
+            <h2>Mes missions détaillées</h2>
+
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="bdd">Base de données</button>
+                    <button class="tab-btn" data-tab="chiffrage">Chiffrage</button>
+                    <button class="tab-btn" data-tab="incompatibilites">Options incompatibles</button>
+                    <button class="tab-btn" data-tab="feuilles-support">Feuilles support</button>
+                </div>
+
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="bdd">
+                        <h3>Base de données</h3>
+                        <p>Création d'une base de données centralisée regroupant les désignations, les codes SAP, les heures et les prix. Cette base remplace les deux fichiers antérieurs (chiffrage et nomenclature) et évite les recopies manuelles source d'erreurs.</p>
+                        <ul>
+                            <li>Structure : table des désignations, table des codes SAP, table des prix et historiques.</li>
+                            <li>Mécanisme de mise à jour : import périodique des prix depuis SAP pour garantir l'actualité des données.</li>
+                            <li>Bénéfices : meilleure maintenabilité, cohérence des références et gain de temps.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="chiffrage">
+                        <h3>Le chiffrage</h3>
+                        <p>Refonte du fichier de chiffrage pour tirer parti de la base centralisée. Le chiffrage sert à établir le devis client et à transmettre les informations nécessaires à la production.</p>
+                        <ul>
+                            <li>Interface utilisateur : saisie des quantités/options avec calcul automatique des prix.</li>
+                            <li>Connexion à la base : récupération des prix, calcul des coûts matières et heures.</li>
+                            <li>Modes d'utilisation : en rendez-vous client pour un chiffrage instantané, ou en post-traitement pour préparation de la production.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="incompatibilites">
+                        <h3>Options incompatibles</h3>
+                        <p>Implémentation d'une matrice d'incompatibilités pour empêcher la sélection simultanée d'options contradictoires (ex. cuve verre + cuve inox pour le même équipement).</p>
+                        <ul>
+                            <li>Matrice binaire (0 = compatible, 1 = incompatible) reliée aux options du chiffrage.</li>
+                            <li>Alerte visuelle et blocage de la saisie lorsque l'utilisateur choisit des options incompatibles.</li>
+                            <li>Réduction significative des erreurs liées à des combinaisons non réalisables.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="feuilles-support">
+                        <h3>Feuilles support</h3>
+                        <p>Ajout de feuilles dédiées pour la visualisation et le suivi :</p>
+                        <ul>
+                            <li><strong>Nomenclature</strong> : extraction automatique des composants nécessaires à la production.</li>
+                            <li><strong>Fourniture</strong> : suivi des fournisseurs, statuts de commande et lieux de livraison.</li>
+                            <li><strong>Découpe des heures</strong> : ventilation des heures et coûts matières par option pour une estimation précise des charges.</li>
+                        </ul>
+                        <p>Ces feuilles sont alimentées automatiquement par les données du chiffrage et la base centralisée, et incluent des macros/Power Query pour faciliter les exports et les mises à jour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Leslie Planet</h4>
+                    <p>Étudiante en BUT Science des Données</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Leslie Planet - Portfolio professionnel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
