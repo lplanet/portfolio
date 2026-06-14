@@ -56,6 +56,19 @@
                     <button class="filter-btn" data-filter="Ingénieur IA" data-type="metier">Ingénieur IA</button>
                 </div>
             </div>
+
+            <div class="filter-group">
+                <h3>Filtrer par matière</h3>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all" data-type="matiere">Tous</button>
+                    <button class="filter-btn" data-filter="Statistique" data-type="matiere">Statistique</button>
+                    <button class="filter-btn" data-filter="Informatique" data-type="matiere">Informatique</button>
+                    <button class="filter-btn" data-filter="Bases de données" data-type="matiere">Bases de données</button>
+                    <button class="filter-btn" data-filter="Machine Learning" data-type="matiere">Machine Learning</button>
+                    <button class="filter-btn" data-filter="BI" data-type="matiere">BI</button>
+                    <button class="filter-btn" data-filter="Géomatique" data-type="matiere">Géomatique</button>
+                </div>
+            </div>
             
             <div class="sort">
                 <label for="sort-select">Trier par :</label>
@@ -73,7 +86,7 @@
             <div class="projects-grid" id="projects-container">
                 
                 <!-- Stage IMA -->
-                <article class="project-card" data-semestre="S4" data-date="2025-04-13" data-title="Stage IMA" data-metiers="Data Analyst,Analyste BI" id="stage-ima">
+                <article class="project-card" data-semestre="S4" data-date="2025-04-13" data-title="Stage IMA" data-metiers="Data Analyst,Analyste BI" data-matiere="Bases de données,Géomatique" id="stage-ima">
                     <div class="project-image">
                         <img src="images/Stage.png" alt="Stage IMA">
                         <div class="project-overlay">
@@ -105,7 +118,7 @@
                 </article>
 
                 <!-- Chatbox Portfolio IA -->
-                <article class="project-card" data-semestre="S6" data-date="2025-12-15" data-title="Chatbox Portfolio IA" data-metiers="Ingénieur IA,Machine Learning Engineer,Data Scientist" id="chatbox">
+                <article class="project-card" data-semestre="S6" data-date="2025-12-15" data-title="Chatbox Portfolio IA" data-metiers="Ingénieur IA,Machine Learning Engineer,Data Scientist" data-matiere="Machine Learning,Informatique" id="chatbox">
                     <div class="project-image">
                         <img src="images/chatbox.png" alt="Chatbox Portfolio IA">
                         <div class="project-overlay">
@@ -138,7 +151,7 @@
                 </article>
 
                 <!-- Big Data - Analyse de sentiment -->
-                <article class="project-card" data-semestre="S6" data-date="2025-11-30" data-title="Big Data Sentiment" data-metiers="Data Scientist,Machine Learning Engineer,Data Engineer" id="big-data">
+                <article class="project-card" data-semestre="S6" data-date="2025-11-30" data-title="Big Data Sentiment" data-metiers="Data Scientist,Machine Learning Engineer,Data Engineer" data-matiere="Statistique,Informatique" id="big-data">
                     <div class="project-image">
                         <img src="images/bigdata.png" alt="Big Data">
                         <div class="project-overlay">
@@ -171,7 +184,7 @@
                 </article>
 
                 <!-- Réseau de neurones - Classification d'images -->
-                <article class="project-card" data-semestre="S5" data-date="2025-10-30" data-title="Classification Images" data-metiers="Data Scientist,Machine Learning Engineer,Ingénieur IA" id="reseau-neurones">
+                <article class="project-card" data-semestre="S5" data-date="2025-10-30" data-title="Classification Images" data-metiers="Data Scientist,Machine Learning Engineer,Ingénieur IA" data-matiere="Machine Learning" id="reseau-neurones">
                     <div class="project-image">
                         <img src="images/neurones.png" alt="Réseau de neurones">
                         <div class="project-overlay">
@@ -203,7 +216,7 @@
                 </article>
 
                 <!-- Migration NoSQL -->
-                <article class="project-card" data-semestre="S5" data-date="2025-10-15" data-title="Migration NoSQL" data-metiers="Data Engineer,Data Analyst,Développeur" id="migration-nosql">
+                <article class="project-card" data-semestre="S5" data-date="2025-10-15" data-title="Migration NoSQL" data-metiers="Data Engineer,Data Analyst,Développeur" data-matiere="Bases de données,Informatique" id="migration-nosql">
                     <div class="project-image">
                         <img src="images/nosql.png" alt="Migration NoSQL">
                         <div class="project-overlay">
@@ -236,7 +249,7 @@
                 </article>
 
                 <!-- Outil décisionnel VCOD -->
-                <article class="project-card" data-semestre="S5" data-date="2025-12-20" data-title="Outil décisionnel VCOD" data-metiers="Data Analyst,Data Engineer,Analyste BI" id="vcod">
+                <article class="project-card" data-semestre="S5" data-date="2025-12-20" data-title="Outil décisionnel VCOD" data-metiers="Data Analyst,Data Engineer,Analyste BI" data-matiere="BI,Bases de données" id="vcod">
                     <div class="project-image">
                         <img src="images/vcod.png" alt="Outil décisionnel">
                         <div class="project-overlay">
@@ -269,7 +282,7 @@
                 </article>
 
                 <!-- API CCAM -->
-                <article class="project-card" data-semestre="S4" data-date="2025-02-01" data-title="Développement API REST - CCAM" data-metiers="Développeur" id="api-ccam">
+                <article class="project-card" data-semestre="S4" data-date="2025-02-01" data-title="Développement API REST - CCAM" data-metiers="Développeur" data-matiere="Informatique" id="api-ccam">
                     <div class="project-image">
                         <img src="images/SAEMesmoudi2.png" alt="API CCAM">
                         <div class="project-overlay">
@@ -301,7 +314,7 @@
                 </article>
 
                 <!-- Datawarehouse -->
-                <article class="project-card" data-semestre="S3" data-date="2024-12-15" data-title="Datawarehouse SportOne" data-metiers="Analyste BI,Data Analyst,Data Engineer" id="datawarehouse">
+                <article class="project-card" data-semestre="S3" data-date="2024-12-15" data-title="Datawarehouse SportOne" data-metiers="Analyste BI,Data Analyst,Data Engineer" data-matiere="Bases de données,BI" id="datawarehouse">
                     <div class="project-image">
                         <img src="images/SAENoel.png" alt="Datawarehouse">
                         <div class="project-overlay">
@@ -333,7 +346,7 @@
                 </article>
 
                 <!-- Reporting Analyse Multivariée -->
-                <article class="project-card" data-semestre="S3" data-date="2024-10-01" data-title="Reporting Pauvreté" data-metiers="Data Analyst,Data Scientist" id="reporting-multivariee">
+                <article class="project-card" data-semestre="S3" data-date="2024-10-01" data-title="Reporting Pauvreté" data-metiers="Data Analyst,Data Scientist" data-matiere="Statistique,BI" id="reporting-multivariee">
                     <div class="project-image">
                         <img src="images/ReportingAnalyseMultivariee.png" alt="Reporting">
                         <div class="project-overlay">
@@ -357,7 +370,7 @@
                 </article>
 
                 <!-- Web Scraping -->
-                <article class="project-card" data-semestre="S3" data-date="2024-11-20" data-title="Collecte données web" data-metiers="Data Engineer,Data Analyst,Développeur" id="web-scraping">
+                <article class="project-card" data-semestre="S3" data-date="2024-11-20" data-title="Collecte données web" data-metiers="Data Engineer,Data Analyst,Développeur" data-matiere="Informatique" id="web-scraping">
                     <div class="project-image">
                         <img src="images/SAEGestionDonneWeb.jpg" alt="Web Scraping">
                         <div class="project-overlay">
@@ -381,7 +394,7 @@
                 </article>
 
                 <!-- Besoin Territoire -->
-                <article class="project-card" data-semestre="S3" data-date="2024-12-01" data-title="Besoin Territoire" data-metiers="" id="besoin-territoire">
+                <article class="project-card" data-semestre="S3" data-date="2024-12-01" data-title="Besoin Territoire" data-metiers="" data-matiere="Géomatique,Informatique" id="besoin-territoire">
                     <div class="project-image">
                         <img src="images/SAEBesoinTerritoire.png" alt="Besoin Territoire">
                         <div class="project-overlay">
@@ -412,7 +425,7 @@
                 </article>
 
                 <!-- DataViz -->
-                <article class="project-card" data-semestre="S2" data-date="2024-06-01" data-title="DataViz Météo France" data-metiers="Data Analyst" id="dataviz">
+                <article class="project-card" data-semestre="S2" data-date="2024-06-01" data-title="DataViz Météo France" data-metiers="Data Analyst" data-matiere="BI,Statistique" id="dataviz">
                     <div class="project-image">
                         <img src="images/SAEDataViz.PNG" alt="DataViz">
                         <div class="project-overlay">
@@ -435,7 +448,7 @@
                 </article>
 
                 <!-- BDR -->
-                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Base de données relationnelle" data-metiers="Data Engineer,Développeur" id="bdr">
+                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Base de données relationnelle" data-metiers="Data Engineer,Développeur" data-matiere="Bases de données" id="bdr">
                     <div class="project-image">
                         <img src="images/SAEBDR.PNG" alt="BDR">
                         <div class="project-overlay">
@@ -467,7 +480,7 @@
                 </article>
 
                 <!-- Régression -->
-                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Régression logements" data-metiers="Data Scientist,Data Analyst" id="regression">
+                <article class="project-card" data-semestre="S2" data-date="2024-03-30" data-title="Régression logements" data-metiers="Data Scientist,Data Analyst" data-matiere="Statistique" id="regression">
                     <div class="project-image">
                         <img src="images/SAEBureau.PNG" alt="Régression">
                         <div class="project-overlay">
@@ -498,7 +511,7 @@
                 </article>
 
                 <!-- Échantillonnage -->
-                <article class="project-card" data-semestre="S2" data-date="2024-03-15" data-title="Échantillonnage" data-metiers="Data Analyst" id="echantillonnage">
+                <article class="project-card" data-semestre="S2" data-date="2024-03-15" data-title="Échantillonnage" data-metiers="Data Analyst" data-matiere="Statistique" id="echantillonnage">
                     <div class="project-image">
                         <img src="images/SAEEchantillonage.PNG" alt="Échantillonnage">
                         <div class="project-overlay">
@@ -521,7 +534,7 @@
                 </article>
 
                 <!-- Martinique -->
-                <article class="project-card" data-semestre="S1" data-date="2024-01-30" data-title="Étude Martinique" data-metiers="Data Analyst" id="martinique">
+                <article class="project-card" data-semestre="S1" data-date="2024-01-30" data-title="Étude Martinique" data-metiers="Data Analyst" data-matiere="Statistique" id="martinique">
                     <div class="project-image">
                         <img src="images/SAEMartinique.PNG" alt="Martinique">
                         <div class="project-overlay">
@@ -544,7 +557,7 @@
                 </article>
 
                 <!-- Islande -->
-                <article class="project-card" data-semestre="S1" data-date="2024-02-15" data-title="Présentation Islande" data-metiers="" id="islande">
+                <article class="project-card" data-semestre="S1" data-date="2024-02-15" data-title="Présentation Islande" data-metiers="" data-matiere="Informatique" id="islande">
                     <div class="project-image">
                         <img src="images/SAEIslande.PNG" alt="Islande">
                         <div class="project-overlay">
@@ -567,7 +580,7 @@
                 </article>
 
                 <!-- Gestion Fichier -->
-                <article class="project-card" data-semestre="S1" data-date="2024-01-15" data-title="Gestion de fichier" data-metiers="Data Engineer,Développeur" id="gestion-fichier">
+                <article class="project-card" data-semestre="S1" data-date="2024-01-15" data-title="Gestion de fichier" data-metiers="Data Engineer,Développeur" data-matiere="Informatique" id="gestion-fichier">
                     <div class="project-image">
                         <img src="images/SAEGestionFichier.PNG" alt="Gestion fichier">
                         <div class="project-overlay">
@@ -598,7 +611,7 @@
                 </article>
 
                 <!-- Reporting S1 -->
-                <article class="project-card" data-semestre="S1" data-date="2023-12-30" data-title="Gestionnaire notes" data-metiers="Développeur" id="reporting-s1">
+                <article class="project-card" data-semestre="S1" data-date="2023-12-30" data-title="Gestionnaire notes" data-metiers="Développeur" data-matiere="Informatique" id="reporting-s1">
                     <div class="project-image">
                         <img src="images/SAEReporting.PNG" alt="Reporting">
                         <div class="project-overlay">
