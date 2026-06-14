@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // État des filtres
     let currentSemestreFilter = 'all';
     let currentMetierFilter = 'all';
+    let currentMatiereFilter = 'all';
 
     // Filtrage des projets
     if (filterBtns.length > 0) {
@@ -33,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentSemestreFilter = filter;
                 } else if (filterType === 'metier') {
                     currentMetierFilter = filter;
+                } else if (filterType === 'matiere') {
+                    currentMatiereFilter = filter;
                 }
 
                 // Appliquer les filtres
@@ -46,14 +49,18 @@ document.addEventListener('DOMContentLoaded', function() {
         projectCards.forEach(card => {
             const semestre = card.getAttribute('data-semestre');
             const metiers = card.getAttribute('data-metiers');
+            const matieres = card.getAttribute('data-matiere');
             
             let showBySemestre = currentSemestreFilter === 'all' || 
                                  (semestre && semestre.includes(currentSemestreFilter));
             
             let showByMetier = currentMetierFilter === 'all' || 
                               (metiers && metiers.includes(currentMetierFilter));
+
+            let showByMatiere = currentMatiereFilter === 'all' ||
+                               (matieres && matieres.includes(currentMatiereFilter));
             
-            if (showBySemestre && showByMetier) {
+            if (showBySemestre && showByMetier && showByMatiere) {
                 card.style.display = 'block';
                 setTimeout(() => {
                     card.style.opacity = '1';
