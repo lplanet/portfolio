@@ -30,52 +30,81 @@
         </div>
     </section>
 
-    <section class="content-section">
+    <section class="stage-overview">
         <div class="container">
-            <h2>Remerciements</h2>
-            <p>Je tiens à exprimer ma profonde gratitude à toutes les personnes qui ont contribué au bon déroulement de mon alternance au sein de l'entreprise Pierre Guérin.</p>
-            <p>Je remercie particulièrement Frédéric Gravelat, mon tuteur en entreprise, ainsi que mes collègues Valérie Schoen et Charly Guérin. Un remerciement spécial à Xavier Barbeau pour la recommandation qui a rendu cette alternance possible. Merci également à ma tutrice pédagogique Sofia Laurent et à l'ensemble de mes enseignants.</p>
+            <div class="overview-card">
+                <h2>L'entreprise</h2>
+                <p><strong>Pierre Guérin</strong> est une entreprise française spécialisée dans la conception et la fabrication de cuves, biofermenteurs et bioréacteurs, fondée en 1949 et intégrée au groupe Bouygues (Equans) depuis 2019. Elle emploie environ 450 collaborateurs et dessert des marchés internationaux.</p>
+                <p>Durant mon alternance, j'ai travaillé au sein du <strong>service chiffrage</strong>, chargé d'établir les devis clients en s'appuyant sur les données techniques des bureaux d'études (plans, réseaux, schémas électriques).</p>
+            </div>
 
-            <h2>Introduction</h2>
-            <p>Dans le cadre de ma formation, j'ai effectué ma troisième année en alternance chez Pierre Guérin, spécialisée dans la fabrication de cuves, biofermenteurs et bioréacteurs. J'ai contribué à l'automatisation du fichier de chiffrage des gammes PRIMO et EVO afin de concevoir un nouvel outil facilitant le chiffrage et améliorant la fiabilité des estimations de coûts.</p>
+            <div class="overview-card">
+                <h2>Mon rôle</h2>
+                <p>Ma mission principale a été l'automatisation et la refonte du fichier de chiffrage pour les gammes PRIMO et EVO afin d'améliorer la fiabilité des estimations et la maintenabilité de l'outil.</p>
+                <ul>
+                    <li>Fusion des fichiers chiffrage et nomenclature et centralisation des données.</li>
+                    <li>Structuration d'une base de données des désignations et codes SAP.</li>
+                    <li>Mise en place d'outils d'aide à la saisie (matrice d'incompatibilités, feuilles support).</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-            <h2>L'entreprise</h2>
-            <h3>Présentation</h3>
-            <p>Pierre Guérin est une entreprise française historique (fondée en 1949) à rayonnement international, spécialisée dans les procédés laitiers, alimentaires et des sciences de la vie. Intégrée au groupe Bouygues (branche Equans) depuis 2019, elle emploie environ 450 collaborateurs et se positionne parmi les leaders mondiaux dans son domaine.</p>
+    <section class="missions-section">
+        <div class="container">
+            <h2>Mes missions détaillées</h2>
 
-            <h3>Service chiffrage</h3>
-            <p>Le service chiffrage établit les devis clients en s'appuyant sur les données techniques fournies par les bureaux d'études (plans, schémas, etc.). Ma mission principale au sein de ce service a été l'automatisation des fichiers de chiffrage, en particulier pour les gammes PRIMO et EVO.</p>
+            <div class="tabs-container">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="bdd">Base de données</button>
+                    <button class="tab-btn" data-tab="chiffrage">Chiffrage</button>
+                    <button class="tab-btn" data-tab="incompatibilites">Options incompatibles</button>
+                    <button class="tab-btn" data-tab="feuilles-support">Feuilles support</button>
+                </div>
 
-            <h2>Missions réalisées</h2>
-            <ul>
-                <li>Automatisation et refonte du fichier de chiffrage (fusion des fichiers chiffrage et nomenclature).</li>
-                <li>Structuration d'une base de données centrale pour stocker les désignations, codes SAP, heures et prix.</li>
-                <li>Mise en place d'une feuille intermédiaire pour découper les codes options en codes SAP uniques.</li>
-                <li>Implémentation d'une matrice d'incompatibilités entre options pour réduire les erreurs de saisie.</li>
-                <li>Création de feuilles support (nomenclature, fourniture, découpe des heures) et automatisations via macros et Power Query.</li>
-            </ul>
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="bdd">
+                        <h3>Base de données</h3>
+                        <p>Création d'une base de données centralisée regroupant les désignations, les codes SAP, les heures et les prix. Cette base remplace les deux fichiers antérieurs (chiffrage et nomenclature) et évite les recopies manuelles source d'erreurs.</p>
+                        <ul>
+                            <li>Structure : table des désignations, table des codes SAP, table des prix et historiques.</li>
+                            <li>Mécanisme de mise à jour : import périodique des prix depuis SAP pour garantir l'actualité des données.</li>
+                            <li>Bénéfices : meilleure maintenabilité, cohérence des références et gain de temps.</li>
+                        </ul>
+                    </div>
 
-            <h2>Optimisations et solutions</h2>
-            <p>La fusion des fichiers et la création d'une base de données centralisée ont permis d'améliorer la maintenabilité et la fiabilité des prix. La feuille de découpe des codes SAP facilite l'ajout et la modification des options. La matrice d'incompatibilités, reliée au chiffrage, alerte visuellement l'utilisateur et empêche la sélection simultanée d'options incompatibles.</p>
+                    <div class="tab-pane" id="chiffrage">
+                        <h3>Le chiffrage</h3>
+                        <p>Refonte du fichier de chiffrage pour tirer parti de la base centralisée. Le chiffrage sert à établir le devis client et à transmettre les informations nécessaires à la production.</p>
+                        <ul>
+                            <li>Interface utilisateur : saisie des quantités/options avec calcul automatique des prix.</li>
+                            <li>Connexion à la base : récupération des prix, calcul des coûts matières et heures.</li>
+                            <li>Modes d'utilisation : en rendez-vous client pour un chiffrage instantané, ou en post-traitement pour préparation de la production.</li>
+                        </ul>
+                    </div>
 
-            <h2>Feuilles support</h2>
-            <p>Des feuilles support ont été ajoutées pour faciliter la visualisation et le suivi : la nomenclature (extraction des composants), la fourniture (suivi des commandes et statuts), et la découpe des heures (vision détaillée des postes de travail).</p>
+                    <div class="tab-pane" id="incompatibilites">
+                        <h3>Options incompatibles</h3>
+                        <p>Implémentation d'une matrice d'incompatibilités pour empêcher la sélection simultanée d'options contradictoires (ex. cuve verre + cuve inox pour le même équipement).</p>
+                        <ul>
+                            <li>Matrice binaire (0 = compatible, 1 = incompatible) reliée aux options du chiffrage.</li>
+                            <li>Alerte visuelle et blocage de la saisie lorsque l'utilisateur choisit des options incompatibles.</li>
+                            <li>Réduction significative des erreurs liées à des combinaisons non réalisables.</li>
+                        </ul>
+                    </div>
 
-            <h2>Conclusion</h2>
-            <p>Le nouvel outil de chiffrage, structuré autour d'une base de données connectée à SAP, améliore la fiabilité des estimations, facilite la maintenance et réduit les erreurs. Les feuilles support et la centralisation des données offrent une meilleure continuité entre les phases commerciales, techniques et industrielles.</p>
-
-            <h2>Bilan personnel et professionnel</h2>
-            <p>Cette expérience m'a permis de développer des compétences techniques (macros Excel, Power Query, automatisation) et des qualités professionnelles (organisation, autonomie, responsabilité). J'ai pu mieux appréhender les enjeux industriels et gagner en confiance.</p>
-
-            <h2>Lexique et annexes</h2>
-            <p>Lexique : Code SAP = codes issus de l'ERP ; Data sheet = fiche technique PDF ; ERP = bases de données internes.</p>
-            <p>Annexes mentionnées dans le rapport : organigramme, extrait de la data sheet, comparaisons des fichiers, anciennes et nouvelles bases de données.</p>
-
-            <h2>Résumé (FR) & Abstract (EN)</h2>
-            <p>Résumé : contribution à l'automatisation du fichier de chiffrage PRIMO/EVO pour améliorer la fiabilité et la maintenabilité du processus.</p>
-            <p>Abstract : Contribution to automating the cost estimation file for PRIMO and EVO product lines to facilitate and improve cost estimation accuracy.</p>
-
-            <p>Pour insérer d'autres éléments (annexes, images, extraits de feuilles Excel ou PDF), fournissez-les et je les intègre proprement sur cette page.</p>
+                    <div class="tab-pane" id="feuilles-support">
+                        <h3>Feuilles support</h3>
+                        <p>Ajout de feuilles dédiées pour la visualisation et le suivi :</p>
+                        <ul>
+                            <li><strong>Nomenclature</strong> : extraction automatique des composants nécessaires à la production.</li>
+                            <li><strong>Fourniture</strong> : suivi des fournisseurs, statuts de commande et lieux de livraison.</li>
+                            <li><strong>Découpe des heures</strong> : ventilation des heures et coûts matières par option pour une estimation précise des charges.</li>
+                        </ul>
+                        <p>Ces feuilles sont alimentées automatiquement par les données du chiffrage et la base centralisée, et incluent des macros/Power Query pour faciliter les exports et les mises à jour.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
