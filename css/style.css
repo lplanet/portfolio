@@ -142,12 +142,39 @@ a:hover {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 6rem 2rem 4rem;
-    background:
-        radial-gradient(circle at 82% 18%, rgba(107, 150, 104, 0.14), transparent 18rem),
-        linear-gradient(135deg, var(--light-bg) 0%, var(--surface-bg) 100%);
+    background: var(--light-bg);
+}
+
+.hero-content {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-description {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.hero-stats,
+.hero-cta {
+    justify-content: center;
+}
+
+.hero-image {
+    text-align: center;
 }
 
 .hero .container {
@@ -229,6 +256,26 @@ a:hover {
     background: var(--secondary-blue);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+/* Texte visible des boutons au survol */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:visited {
+    color: var(--white);
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:visited {
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: var(--white);
 }
 
 .btn-secondary {
@@ -2123,14 +2170,17 @@ background: var(--light-bg);
         font-size: 1.875rem;
     }
     
-    .hero .container {
+    .hero {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     
+    .hero-content {
+        text-align: center;
+    }
+    
     .hero-image {
         order: -1;
-        text-align: center;
     }
     
     .hero-stats {
@@ -2403,4 +2453,9 @@ background: var(--light-bg);
     .mission-item h4 {
         font-size: 1.1rem;
     }
+}
+
+/* Couleur uniforme des sections du projet professionnel */
+.cesure-section {
+    background-color: var(--light-bg);
 }
