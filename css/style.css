@@ -258,6 +258,26 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
+/* Texte visible des boutons au survol */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:visited {
+    color: var(--white);
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:visited {
+    color: var(--primary-blue);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: var(--white);
+}
+
 .btn-secondary {
     background: transparent;
     color: var(--primary-blue);
