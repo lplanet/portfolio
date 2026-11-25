@@ -2599,3 +2599,248 @@ html {
         width: 100%;
     }
 }
+
+/* Nouvelle page Stage modulaire */
+.stage-page {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.stage-selector {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.stage-selector-label {
+    margin-right: 0.5rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.stage-filter {
+    padding: 0.65rem 1.1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--surface-bg);
+    color: var(--text-dark);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.stage-filter.active,
+.stage-filter:hover {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.stage-experience {
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: var(--surface-bg);
+}
+
+.stage-identity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, var(--primary-dark), #354C3D);
+}
+
+.stage-identity h2 {
+    margin: 0.25rem 0 0.35rem;
+    color: var(--white);
+}
+
+.stage-period {
+    color: rgba(243, 243, 232, 0.72);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.stage-role {
+    margin: 0;
+    color: var(--white);
+}
+
+.stage-summary {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.stage-summary span {
+    min-width: 90px;
+    padding: 0.85rem;
+    border: 1px solid rgba(243, 243, 232, 0.22);
+    border-radius: 10px;
+    color: rgba(243, 243, 232, 0.82);
+    text-align: center;
+}
+
+.stage-summary strong {
+    display: block;
+    color: var(--white);
+    font-size: 1.25rem;
+}
+
+.stage-context-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2.5rem 2.5rem 0;
+}
+
+.stage-context-card {
+    padding: 1.5rem;
+    border-left: 3px solid var(--primary-blue);
+    border-radius: 10px;
+    background: var(--light-bg);
+}
+
+.stage-section-title {
+    margin: 3rem 2.5rem 1.5rem;
+}
+
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 2.5rem;
+}
+
+.stage-page .mission-card {
+    position: relative;
+    min-height: 100%;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: rgba(243, 243, 232, 0.62);
+}
+
+.stage-page .mission-card h4 {
+    margin-right: 3.5rem;
+    color: var(--primary-dark);
+}
+
+.stage-page .mission-card p {
+    font-size: 0.95rem;
+}
+
+.mission-number {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    color: var(--primary-blue);
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.mission-tools,
+.stage-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.mission-tools span,
+.stage-tags span {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.stage-end-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding: 2.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.stage-result {
+    padding: 1.5rem;
+    border-left: 3px solid var(--accent-earth);
+    background: rgba(154, 136, 103, 0.08);
+}
+
+/* Bouton vers le rapport de stage */
+.stage-report-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0.85rem 1.35rem;
+    border: 1px solid rgba(243, 243, 232, 0.38);
+    border-radius: 50px;
+    background: var(--accent-moss);
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stage-report-btn:hover,
+.stage-report-btn:focus,
+.stage-report-btn:visited {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+@media (max-width: 900px) {
+    .stage-identity,
+    .stage-context-grid,
+    .missions-grid,
+    .stage-end-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stage-identity {
+        display: grid;
+    }
+
+    .stage-summary {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .stage-identity,
+    .stage-context-grid,
+    .stage-end-grid {
+        padding: 1.5rem;
+    }
+
+    .stage-context-grid,
+    .missions-grid,
+    .stage-end-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .missions-grid,
+    .stage-section-title {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        padding: 0;
+    }
+
+    .stage-page .mission-card {
+        padding: 1.5rem;
+    }
+
+    .stage-summary span {
+        min-width: 75px;
+    }
+}
