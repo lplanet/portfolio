@@ -2546,3 +2546,56 @@ background: var(--light-bg);
         grid-column: auto;
     }
 }
+
+/* Navigation interne du parcours */
+.page-jumps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+.page-jump-btn {
+    display: inline-block;
+    padding: 0.65rem 1.1rem;
+    background: rgba(243, 243, 232, 0.12);
+    color: var(--white);
+    border: 1px solid rgba(243, 243, 232, 0.38);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    transition: var(--transition);
+}
+
+.page-jump-btn:hover {
+    background: var(--accent-moss);
+    color: var(--white);
+    border-color: var(--accent-moss);
+    transform: translateY(-2px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.intro-section,
+.formation-section,
+.engagement-section,
+.cesure-section {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 480px) {
+    .page-jumps {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .page-jump-btn {
+        width: 100%;
+    }
+}
