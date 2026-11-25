@@ -549,82 +549,85 @@ a:hover {
 /* Engagement Section */
 .engagement-section {
     padding: 4rem 0;
+    background: var(--light-bg);
 }
 
 .engagement-card {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    overflow: hidden;
+    padding: 0;
     background: var(--surface-bg);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-md);
-    border-left: 4px solid var(--accent-green);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: none;
 }
 
 .engagement-header {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.engagement-icon {
-    font-size: 3.5rem;
-    line-height: 1;
+    gap: 0;
+    margin: 0;
+    padding: 2.5rem 2rem;
+    background:
+        linear-gradient(135deg, rgba(107, 150, 104, 0.18), transparent),
+        var(--primary-dark);
 }
 
 .engagement-header h3 {
-    color: var(--primary-blue);
-    margin-bottom: 0.5rem;
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
 }
 
 .engagement-role {
-    display: block;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 0.25rem;
+    color: rgba(243, 243, 232, 0.82);
 }
 
 .engagement-date {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: var(--accent-green);
-    color: var(--white);
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
+    margin-top: 1rem;
+    background: var(--accent-moss);
 }
 
 .engagement-content {
-    line-height: 1.7;
+    padding: 2.5rem;
+    background:
+        linear-gradient(135deg, rgba(107, 150, 104, 0.04), transparent),
+        var(--surface-bg);
 }
 
 .engagement-desc {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    font-size: 1.05rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-dark);
 }
 
 .engagement-content h4 {
-    color: var(--text-dark);
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
-}
-
-.engagement-content ul {
-    margin: 0.5rem 0 1.5rem 1.5rem;
-}
-
-.engagement-content li {
-    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
 }
 
 .engagement-impact {
     margin-top: 2rem;
-    padding: 1.5rem;
-    background: var(--light-bg);
+    padding: 1.25rem 1.5rem;
+    background: rgba(107, 150, 104, 0.09);
+    border-left: 3px solid var(--primary-blue);
     border-radius: 8px;
-    color: var(--text-dark);
-    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .engagement-card {
+        grid-template-columns: 1fr;
+    }
+
+    .engagement-header {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .engagement-content {
+        padding: 1.75rem 1.5rem;
+    }
 }
 
 /* Timeline */
