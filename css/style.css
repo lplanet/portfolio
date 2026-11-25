@@ -2776,6 +2776,29 @@ html {
     background: rgba(154, 136, 103, 0.08);
 }
 
+/* Bouton vers le rapport de stage */
+.stage-report-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0.85rem 1.35rem;
+    border: 1px solid rgba(243, 243, 232, 0.38);
+    border-radius: 50px;
+    background: var(--accent-moss);
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stage-report-btn:hover,
+.stage-report-btn:focus,
+.stage-report-btn:visited {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
 @media (max-width: 900px) {
     .stage-identity,
     .stage-context-grid,
