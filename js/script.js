@@ -1075,5 +1075,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Filtre des expériences de stage
+    const stageFilters = document.querySelectorAll('.stage-filter');
+    const stageExperiences = document.querySelectorAll('.stage-experience');
+
+    stageFilters.forEach(filter => {
+        filter.addEventListener('click', function() {
+            stageFilters.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+
+            const selectedStage = this.getAttribute('data-stage-filter');
+            stageExperiences.forEach(experience => {
+                const matches = selectedStage === 'all' || experience.dataset.stage === selectedStage;
+                experience.style.display = matches ? 'block' : 'none';
+            });
+        });
+    });
+
     console.log('Portfolio Leslie Planet - JavaScript chargé ✅');
 });
