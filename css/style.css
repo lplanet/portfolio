@@ -3036,3 +3036,36 @@ html {
 .skills-columns li {
     margin-bottom: 0.65rem;
 }
+
+/* Bouton du rapport d’alternance */
+.alternance-facts {
+    grid-template-columns: 1fr;
+}
+
+.alternance-report-btn {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--primary-blue);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.alternance-report-btn strong {
+    color: var(--white);
+}
+
+.alternance-report-btn span {
+    color: var(--white);
+}
+
+.alternance-report-btn:hover,
+.alternance-report-btn:focus,
+.alternance-report-btn:visited {
+    background: var(--secondary-blue);
+}
