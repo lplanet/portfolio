@@ -2844,3 +2844,228 @@ html {
         min-width: 75px;
     }
 }
+
+/* Page Alternance moderne */
+.alternance-intro,
+.project-journey,
+.alternance-skills {
+    padding: 4rem 0;
+}
+
+.alternance-intro {
+    background: var(--light-bg);
+}
+
+.alternance-hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.alternance-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.alternance-facts div {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--surface-bg);
+    text-align: center;
+}
+
+.alternance-facts strong {
+    color: var(--primary-blue);
+    font-size: 1.35rem;
+}
+
+.alternance-facts span {
+    margin-top: 0.35rem;
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+
+.section-intro {
+    max-width: 850px;
+}
+
+.project-journey {
+    background: var(--surface-bg);
+}
+
+.journey-timeline {
+    position: relative;
+    max-width: 950px;
+    margin-top: 3rem;
+}
+
+.journey-timeline::before {
+    content: '';
+    position: absolute;
+    left: 34px;
+    top: 34px;
+    bottom: 34px;
+    width: 2px;
+    background: linear-gradient(var(--primary-blue), var(--border-color));
+}
+
+.journey-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.journey-marker {
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border: 5px solid var(--surface-bg);
+    border-radius: 50%;
+    background: var(--primary-blue);
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.journey-content {
+    padding: 1.75rem 2rem;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 12px;
+    background: var(--light-bg);
+}
+
+.journey-phase {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.journey-output {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    background: rgba(107, 150, 104, 0.10);
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.alternance-technical {
+    padding: 4rem 0;
+    background: var(--light-bg);
+}
+
+.technical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.technical-card {
+    position: relative;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--surface-bg);
+}
+
+.technical-index {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary-blue);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.tool-tags span {
+    padding: 0.35rem 0.7rem;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    background: var(--light-bg);
+    color: var(--text-dark);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.alternance-skills {
+    background: var(--surface-bg);
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.skills-columns > div {
+    padding: 1.75rem;
+    border-top: 3px solid var(--primary-blue);
+    background: var(--light-bg);
+}
+
+.skills-columns ul {
+    padding-left: 1.2rem;
+}
+
+.skills-columns li {
+    margin-bottom: 0.65rem;
+}
+
+/* Bouton du rapport d’alternance */
+.alternance-facts {
+    grid-template-columns: 1fr;
+}
+
+.alternance-report-btn {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--primary-blue);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.alternance-report-btn strong {
+    color: var(--white);
+}
+
+.alternance-report-btn span {
+    color: var(--white);
+}
+
+.alternance-report-btn:hover,
+.alternance-report-btn:focus,
+.alternance-report-btn:visited {
+    background: var(--secondary-blue);
+}

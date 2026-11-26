@@ -25,83 +25,180 @@
     <section class="page-header">
         <div class="container">
             <h1>Mon Alternance</h1>
-            <p class="page-subtitle">Analyste de donnée au sein de Pierre Guérin. - Duré 1 an </p>
+            <p class="page-subtitle">Autonomie, développement de fichier métier et amélioration continue au sein de Pierre Guérin</p>
         </div>
     </section>
 
-    <section class="stage-overview">
+    <section class="alternance-intro">
         <div class="container">
-            <div class="overview-card">
-                <h2>L'entreprise</h2>
-                <p><strong>Pierre Guérin</strong> est une entreprise française spécialisée dans la conception et la fabrication de cuves, biofermenteurs et bioréacteurs, fondée en 1949 et intégrée au groupe Bouygues (Equans) depuis 2019. Elle emploie environ 450 collaborateurs et dessert des marchés internationaux.</p>
-                <p>Durant mon alternance, j'ai travaillé au sein du <strong>service chiffrage</strong>, chargé d'établir les devis clients en s'appuyant sur les données techniques des bureaux d'études (plans, réseaux, schémas électriques).</p>
-            </div>
-
-            <div class="overview-card">
-                <h2>Mon rôle</h2>
-                <p>Ma mission principale a été l'automatisation et la refonte du fichier de chiffrage pour les gammes PRIMO et EVO afin d'améliorer la fiabilité des estimations et la maintenabilité de l'outil.</p>
-                <ul>
-                    <li>Fusion des fichiers chiffrage et nomenclature et centralisation des données.</li>
-                    <li>Structuration d'une base de données des désignations et codes SAP.</li>
-                    <li>Mise en place d'outils d'aide à la saisie (matrice d'incompatibilités, feuilles support).</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="missions-section">
-        <div class="container">
-            <h2>Mes missions détaillées</h2>
-
-            <div class="tabs-container">
-                <div class="tabs-nav">
-                    <button class="tab-btn active" data-tab="bdd">Base de données</button>
-                    <button class="tab-btn" data-tab="chiffrage">Chiffrage</button>
-                    <button class="tab-btn" data-tab="incompatibilites">Options incompatibles</button>
-                    <button class="tab-btn" data-tab="feuilles-support">Feuilles support</button>
+            <div class="alternance-hero-grid">
+                <div>
+                    <span class="stage-period">Alternance · 1 an</span>
+                    <h2>Pierre Guérin</h2>
+                    <p>
+                        Je ai été alternante au sein du service chiffrage, chargé d’estimer les équipements
+                        conçus pour les gammes PRIMO et EVO. L’objectif est de transformer les besoins
+                        techniques en un devis fiable pour le client et en informations exploitables
+                        pour la production.
+                    </p>
                 </div>
+                <div class="alternance-facts">
+                    <a href="Stage/Rapport_LesliePLANET%20(1).pdf" class="alternance-report-btn" target="_blank" rel="noopener noreferrer">
+                        <strong>Rapport de stage</strong>
+                        <span>Consulter le document PDF</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="tabs-content">
-                    <div class="tab-pane active" id="bdd">
-                        <h3>Base de données</h3>
-                        <p>Création d'une base de données centralisée regroupant les désignations, les codes SAP, les heures et les prix. Cette base remplace les deux fichiers antérieurs (chiffrage et nomenclature) et évite les recopies manuelles source d'erreurs.</p>
-                        <ul>
-                            <li>Structure : table des désignations, table des codes SAP, table des prix et historiques.</li>
-                            <li>Mécanisme de mise à jour : import périodique des prix depuis SAP pour garantir l'actualité des données.</li>
-                            <li>Bénéfices : meilleure maintenabilité, cohérence des références et gain de temps.</li>
-                        </ul>
-                    </div>
+    <section class="project-journey">
+        <div class="container">
+            <h2>Mon projet de bout en bout</h2>
+            <p class="section-intro">
+                La mission consistait à refondre un fichier de chiffrage existant afin de fiabiliser
+                les estimations, centraliser les informations et améliorer l’utilisation au quotidien.
+            </p>
 
-                    <div class="tab-pane" id="chiffrage">
-                        <h3>Le chiffrage</h3>
-                        <p>Refonte du fichier de chiffrage pour tirer parti de la base centralisée. Le chiffrage sert à établir le devis client et à transmettre les informations nécessaires à la production.</p>
-                        <ul>
-                            <li>Interface utilisateur : saisie des quantités/options avec calcul automatique des prix.</li>
-                            <li>Connexion à la base : récupération des prix, calcul des coûts matières et heures.</li>
-                            <li>Modes d'utilisation : en rendez-vous client pour un chiffrage instantané, ou en post-traitement pour préparation de la production.</li>
-                        </ul>
+            <div class="journey-timeline">
+                <article class="journey-step">
+                    <div class="journey-marker">01</div>
+                    <div class="journey-content">
+                        <span class="journey-phase">Analyse &amp; besoins</span>
+                        <h3>Rencontrer les utilisateurs du fichier</h3>
+                        <p>
+                            J’ai échangé avec les différentes équipes concernées par le chiffrage afin
+                            de comprendre leurs usages, leurs difficultés et les informations attendues.
+                            Ces réunions ont permis de définir les priorités et les limites du projet.
+                        </p>
+                        <div class="journey-output">Résultat : une vision claire des utilisateurs, des données nécessaires et des règles métier.</div>
                     </div>
+                </article>
 
-                    <div class="tab-pane" id="incompatibilites">
-                        <h3>Options incompatibles</h3>
-                        <p>Implémentation d'une matrice d'incompatibilités pour empêcher la sélection simultanée d'options contradictoires (ex. cuve verre + cuve inox pour le même équipement).</p>
-                        <ul>
-                            <li>Matrice binaire (0 = compatible, 1 = incompatible) reliée aux options du chiffrage.</li>
-                            <li>Alerte visuelle et blocage de la saisie lorsque l'utilisateur choisit des options incompatibles.</li>
-                            <li>Réduction significative des erreurs liées à des combinaisons non réalisables.</li>
-                        </ul>
+                <article class="journey-step">
+                    <div class="journey-marker">02</div>
+                    <div class="journey-content">
+                        <span class="journey-phase">Conception</span>
+                        <h3>Structurer les données et les procédures</h3>
+                        <p>
+                            J’ai centralisé les désignations, codes SAP, prix et heures dans une base unique.
+                            J’ai également proposé une matrice d’incompatibilités pour éviter les combinaisons
+                            d’options impossibles et sécurisé la saisie des utilisateurs.
+                        </p>
+                        <div class="journey-output">Résultat : une structure plus claire, maintenable et fiable.</div>
                     </div>
+                </article>
 
-                    <div class="tab-pane" id="feuilles-support">
-                        <h3>Feuilles support</h3>
-                        <p>Ajout de feuilles dédiées pour la visualisation et le suivi :</p>
-                        <ul>
-                            <li><strong>Nomenclature</strong> : extraction automatique des composants nécessaires à la production.</li>
-                            <li><strong>Fourniture</strong> : suivi des fournisseurs, statuts de commande et lieux de livraison.</li>
-                            <li><strong>Découpe des heures</strong> : ventilation des heures et coûts matières par option pour une estimation précise des charges.</li>
-                        </ul>
-                        <p>Ces feuilles sont alimentées automatiquement par les données du chiffrage et la base centralisée, et incluent des macros/Power Query pour faciliter les exports et les mises à jour.</p>
+                <article class="journey-step">
+                    <div class="journey-marker">03</div>
+                    <div class="journey-content">
+                        <span class="journey-phase">Développement</span>
+                        <h3>Créer puis améliorer le fichier</h3>
+                        <p>
+                            J’ai développé les fonctionnalités du fichier, puis les ai présentées régulièrement
+                            aux équipes utilisatrices. Leurs retours ont permis d’ajuster les interfaces,
+                            d’améliorer les automatisations et de corriger les points imprécis.
+                        </p>
+                        <div class="journey-output">Résultat : un outil construit à partir de retours utilisateurs réels.</div>
                     </div>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-marker">04</div>
+                    <div class="journey-content">
+                        <span class="journey-phase">Tests &amp; validation</span>
+                        <h3>Passer à une phase de validation en conditions réelles</h3>
+                        <p>
+                            Une fois les principales fonctionnalités terminées, le fichier est passé en phase
+                            de test auprès des utilisateurs. J’ai relevé les anomalies, vérifié les calculs,
+                            corrigé les erreurs et adapté certaines procédures avec les équipes.
+                        </p>
+                        <div class="journey-output">Résultat : une validation progressive avant la mise en service complète.</div>
+                    </div>
+                </article>
+
+                <article class="journey-step">
+                    <div class="journey-marker">05</div>
+                    <div class="journey-content">
+                        <span class="journey-phase">Transmission</span>
+                        <h3>Documenter et rendre l’outil autonome</h3>
+                        <p>
+                            J’ai finalisé la documentation du fichier et enregistré des tutoriels vidéo
+                            pour expliquer son fonctionnement. Ces supports permettent aux utilisateurs
+                            de comprendre les étapes, les options disponibles et le fonctionnement du programme.
+                        </p>
+                        <div class="journey-output">Résultat : une meilleure prise en main et une transmission durable du projet.</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="alternance-technical">
+        <div class="container">
+            <h2>Ce que j’ai mis en œuvre</h2>
+            <div class="technical-grid">
+                <article class="technical-card">
+                    <span class="technical-index">01</span>
+                    <h3>Base de données centralisée</h3>
+                    <p>Fusion des informations de chiffrage et de nomenclature : désignations, codes SAP, prix, heures et historiques.</p>
+                    <div class="tool-tags"><span>Excel</span><span>Power Query</span><span>SAP</span></div>
+                </article>
+
+                <article class="technical-card">
+                    <span class="technical-index">02</span>
+                    <h3>Outil de chiffrage</h3>
+                    <p>Refonte du fichier permettant la saisie des options, les calculs automatiques et le calcul des heures et matières.</p>
+                    <div class="tool-tags"><span>Macros VBA</span><span>Formules Excel</span><span>Contrôle de saisie</span></div>
+                </article>
+
+                <article class="technical-card">
+                    <span class="technical-index">03</span>
+                    <h3>Matrice d’incompatibilités</h3>
+                    <p>Mise en place d’un système détectant les options contradictoires pour empêcher les configurations impossibles.</p>
+                    <div class="tool-tags"><span>Matrice</span><span>Excel</span><span>Règles métier</span></div>
+                </article>
+
+                <article class="technical-card">
+                    <span class="technical-index">04</span>
+                    <h3>Feuilles support</h3>
+                    <p>Nomenclature automatique, suivi de fourniture, découpe des heures et présentation des informations utiles à la production.</p>
+                    <div class="tool-tags"><span>Power Query</span><span>Automatisation</span><span>Rapports</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="alternance-skills">
+        <div class="container">
+            <h2>Compétences développées</h2>
+            <div class="skills-columns">
+                <div>
+                    <h3>Projet &amp; organisation</h3>
+                    <ul>
+                        <li>Recueil des besoins auprès des utilisateurs</li>
+                        <li>Animation de réunions et prise en compte des retours</li>
+                        <li>Conception, développement, tests et documentation</li>
+                        <li>Gestion d’un projet de bout en bout</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Technique &amp; qualité</h3>
+                    <ul>
+                        <li>Modélisation et centralisation des données</li>
+                        <li>Automatisation avec VBA et Power Query</li>
+                        <li>Contrôle de cohérence des données</li>
+                        <li>Fiabilisation des calculs et des interfaces</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Communication &amp; transmission</h3>
+                    <ul>
+                        <li>Adaptation aux utilisateurs du métier</li>
+                        <li>Rédaction de procédures</li>
+                        <li>Création de tutoriels vidéo</li>
+                        <li>Accompagnement de la prise en main</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -113,6 +210,25 @@
                 <div class="footer-section">
                     <h4>Leslie Planet</h4>
                     <p>Étudiante en BUT Science des Données</p>
+                    <p>IUT de Niort - Université de Poitiers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="parcours.html">Parcours</a></li>
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="stage.html">Stage</a></li>
+                        <li><a href="alternance.html">Alternance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email : leslie.planet77@gmail.com</p>
+                    <p>Téléphone : 07 68 40 23 29</p>
+                    <p>LinkedIn : Leslie Planet</p>
+                    <p><a href="docs/cv4-LesliePlanet.pdf" target="_blank">Télécharger mon CV</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
